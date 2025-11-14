@@ -1,0 +1,5 @@
+640:1000:1000:/etc/openvswitch/conf.db
+600:1000:1000:/etc/openvswitch/.conf.db.~lock~
+644:1000:1000:/etc/openvswitch/.gns3_perms
+755:1000:1000:/etc/openvswitch/init.sh
+755:1000:1000:/etc/openvswitch

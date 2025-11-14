@@ -1,0 +1,18 @@
+Oct 29 13:49:33.351 HYPERVISOR: Release 0.2.21-amd64/Linux (tag 2019071212)
+Oct 29 13:49:33.351 HYPERVISOR: Started on IP = localhost, TCP port = 54885.
+Oct 29 13:49:33.355 HYPERVISOR: exec_cmd: hypervisor version 
+Oct 29 13:49:33.356 HYPERVISOR: exec_cmd: hypervisor working_dir /home/sdn/GNS3/projects/high_distinction1/project-files/dynamips 
+Oct 29 13:49:33.356 GENERAL: working_dir=/home/sdn/GNS3/projects/high_distinction1/project-files/dynamips
+Oct 29 13:49:33.357 HYPERVISOR: exec_cmd: ethsw create Mgnt-SW2 
+Oct 29 13:49:35.151 HYPERVISOR: exec_cmd: nio create_udp udp-d3e5d590-142f-431b-8ed9-3a284a16c813 10002 127.0.0.1 10003 
+Oct 29 13:49:35.152 HYPERVISOR: exec_cmd: ethsw add_nio Mgnt-SW2 udp-d3e5d590-142f-431b-8ed9-3a284a16c813 
+Oct 29 13:49:35.162 HYPERVISOR: exec_cmd: ethsw set_access_port Mgnt-SW2 udp-d3e5d590-142f-431b-8ed9-3a284a16c813 1 
+Oct 29 13:49:35.332 HYPERVISOR: exec_cmd: nio create_udp udp-adfc910d-cb33-40ad-93dc-a714efb1ebdf 10004 127.0.0.1 10005 
+Oct 29 13:49:35.333 HYPERVISOR: exec_cmd: ethsw add_nio Mgnt-SW2 udp-adfc910d-cb33-40ad-93dc-a714efb1ebdf 
+Oct 29 13:49:35.345 HYPERVISOR: exec_cmd: ethsw set_access_port Mgnt-SW2 udp-adfc910d-cb33-40ad-93dc-a714efb1ebdf 1 
+Oct 29 13:49:35.424 HYPERVISOR: exec_cmd: nio create_udp udp-97474863-56dd-4139-97eb-d4c1e35c2a35 10006 127.0.0.1 10007 
+Oct 29 13:49:35.425 HYPERVISOR: exec_cmd: ethsw add_nio Mgnt-SW2 udp-97474863-56dd-4139-97eb-d4c1e35c2a35 
+Oct 29 13:49:35.446 HYPERVISOR: exec_cmd: ethsw set_access_port Mgnt-SW2 udp-97474863-56dd-4139-97eb-d4c1e35c2a35 1 
+Oct 29 13:49:36.412 HYPERVISOR: exec_cmd: nio create_udp udp-d93715d8-2eab-48fe-9d15-dd136f944f5b 10032 127.0.0.1 10033 
+Oct 29 13:49:36.413 HYPERVISOR: exec_cmd: ethsw add_nio Mgnt-SW2 udp-d93715d8-2eab-48fe-9d15-dd136f944f5b 
+Oct 29 13:49:36.419 HYPERVISOR: exec_cmd: ethsw set_access_port Mgnt-SW2 udp-d93715d8-2eab-48fe-9d15-dd136f944f5b 1 

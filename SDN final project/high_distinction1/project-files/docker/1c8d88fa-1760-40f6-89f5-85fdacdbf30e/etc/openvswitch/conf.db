@@ -1,0 +1,378 @@
+OVSDB JSON 14742 244046951e948a3a3465093a9b95fa4bd9aca0e5
+{"cksum":"3781850481 26690","name":"Open_vSwitch","version":"8.3.0","tables":{"Controller":{"columns":{"enable_async_messages":{"type":{"min":0,"key":"boolean"}},"local_gateway":{"type":{"min":0,"key":"string"}},"local_netmask":{"type":{"min":0,"key":"string"}},"type":{"type":{"min":0,"key":{"type":"string","enum":["set",["primary","service"]]}}},"controller_rate_limit":{"type":{"min":0,"key":{"minInteger":100,"type":"integer"}}},"role":{"ephemeral":true,"type":{"min":0,"key":{"type":"string","enum":["set",["master","other","slave"]]}}},"max_backoff":{"type":{"min":0,"key":{"minInteger":1000,"type":"integer"}}},"inactivity_probe":{"type":{"min":0,"key":"integer"}},"connection_mode":{"type":{"min":0,"key":{"type":"string","enum":["set",["in-band","out-of-band"]]}}},"is_connected":{"ephemeral":true,"type":"boolean"},"status":{"ephemeral":true,"type":{"max":"unlimited","min":0,"key":"string","value":"string"}},"other_config":{"type":{"max":"unlimited","min":0,"key":"string","value":"string"}},"external_ids":{"type":{"max":"unlimited","min":0,"key":"string","value":"string"}},"controller_burst_limit":{"type":{"min":0,"key":{"minInteger":25,"type":"integer"}}},"local_ip":{"type":{"min":0,"key":"string"}},"controller_queue_size":{"type":{"min":0,"key":{"minInteger":1,"maxInteger":512,"type":"integer"}}},"target":{"type":"string"}}},"Bridge":{"indexes":[["name"]],"columns":{"name":{"mutable":false,"type":"string"},"flood_vlans":{"type":{"max":4096,"min":0,"key":{"minInteger":0,"maxInteger":4095,"type":"integer"}}},"auto_attach":{"type":{"min":0,"key":{"type":"uuid","refTable":"AutoAttach"}}},"ports":{"type":{"max":"unlimited","min":0,"key":{"type":"uuid","refTable":"Port"}}},"stp_enable":{"type":"boolean"},"fail_mode":{"type":{"min":0,"key":{"type":"string","enum":["set",["secure","standalone"]]}}},"rstp_enable":{"type":"boolean"},"rstp_status":{"ephemeral":true,"type":{"max":"unlimited","min":0,"key":"string","value":"string"}},"flow_tables":{"type":{"max":"unlimited","min":0,"key":{"minInteger":0,"maxInteger":254,"type":"integer"},"value":{"type":"uuid","refTable":"Flow_Table"}}},"netflow":{"type":{"min":0,"key":{"type":"uuid","refTable":"NetFlow"}}},"datapath_type":{"type":"string"},"controller":{"type":{"max":"unlimited","min":0,"key":{"type":"uuid","refTable":"Controller"}}},"status":{"ephemeral":true,"type":{"max":"unlimited","min":0,"key":"string","value":"string"}},"ipfix":{"type":{"min":0,"key":{"type":"uuid","refTable":"IPFIX"}}},"external_ids":{"type":{"max":"unlimited","min":0,"key":"string","value":"string"}},"other_config":{"type":{"max":"unlimited","min":0,"key":"string","value":"string"}},"datapath_id":{"ephemeral":true,"type":{"min":0,"key":"string"}},"mirrors":{"type":{"max":"unlimited","min":0,"key":{"type":"uuid","refTable":"Mirror"}}},"mcast_snooping_enable":{"type":"boolean"},"datapath_version":{"type":"string"},"sflow":{"type":{"min":0,"key":{"type":"uuid","refTable":"sFlow"}}},"protocols":{"type":{"max":"unlimited","min":0,"key":{"type":"string","enum":["set",["OpenFlow10","OpenFlow11","OpenFlow12","OpenFlow13","OpenFlow14","OpenFlow15"]]}}}}},"Queue":{"isRoot":true,"columns":{"other_config":{"type":{"max":"unlimited","min":0,"key":"string","value":"string"}},"external_ids":{"type":{"max":"unlimited","min":0,"key":"string","value":"string"}},"dscp":{"type":{"min":0,"key":{"minInteger":0,"maxInteger":63,"type":"integer"}}}}},"Open_vSwitch":{"maxRows":1,"isRoot":true,"columns":{"manager_options":{"type":{"max":"unlimited","min":0,"key":{"type":"uuid","refTable":"Manager"}}},"dpdk_initialized":{"type":"boolean"},"statistics":{"ephemeral":true,"type":{"max":"unlimited","min":0,"key":"string","value":"string"}},"dpdk_version":{"type":{"min":0,"key":"string"}},"cur_cfg":{"type":"integer"},"next_cfg":{"type":"integer"},"iface_types":{"type":{"max":"unlimited","min":0,"key":"string"}},"datapath_types":{"type":{"max":"unlimited","min":0,"key":"string"}},"db_version":{"type":{"min":0,"key":"string"}},"system_version":{"type":{"min":0,"key":"string"}},"bridges":{"type":{"max":"unlimited","min":0,"key":{"type":"uuid","refTable":"Bridge"}}},"external_ids":{"type":{"max":"unlimited","min":0,"key":"string","value":"string"}},"other_config":{"type":{"max":"unlimited","min":0,"key":"string","value":"string"}},"ovs_version":{"type":{"min":0,"key":"string"}},"ssl":{"type":{"min":0,"key":{"type":"uuid","refTable":"SSL"}}},"datapaths":{"type":{"max":"unlimited","min":0,"key":"string","value":{"type":"uuid","refTable":"Datapath"}}},"system_type":{"type":{"min":0,"key":"string"}}}},"NetFlow":{"columns":{"active_timeout":{"type":{"key":{"minInteger":-1,"type":"integer"}}},"engine_type":{"type":{"min":0,"key":{"minInteger":0,"maxInteger":255,"type":"integer"}}},"engine_id":{"type":{"min":0,"key":{"minInteger":0,"maxInteger":255,"type":"integer"}}},"add_id_to_interface":{"type":"boolean"},"external_ids":{"type":{"max":"unlimited","min":0,"key":"string","value":"string"}},"targets":{"type":{"max":"unlimited","key":"string"}}}},"IPFIX":{"columns":{"cache_active_timeout":{"type":{"min":0,"key":{"minInteger":0,"maxInteger":4200,"type":"integer"}}},"obs_point_id":{"type":{"min":0,"key":{"minInteger":0,"maxInteger":4294967295,"type":"integer"}}},"other_config":{"type":{"max":"unlimited","min":0,"key":"string","value":"string"}},"external_ids":{"type":{"max":"unlimited","min":0,"key":"string","value":"string"}},"sampling":{"type":{"min":0,"key":{"minInteger":1,"maxInteger":4294967295,"type":"integer"}}},"targets":{"type":{"max":"unlimited","min":0,"key":"string"}},"cache_max_flows":{"type":{"min":0,"key":{"minInteger":0,"maxInteger":4294967295,"type":"integer"}}},"obs_domain_id":{"type":{"min":0,"key":{"minInteger":0,"maxInteger":4294967295,"type":"integer"}}}}},"CT_Zone":{"columns":{"timeout_policy":{"type":{"min":0,"key":{"type":"uuid","refTable":"CT_Timeout_Policy"}}},"external_ids":{"type":{"max":"unlimited","min":0,"key":"string","value":"string"}}}},"QoS":{"isRoot":true,"columns":{"queues":{"type":{"max":"unlimited","min":0,"key":{"minInteger":0,"maxInteger":4294967295,"type":"integer"},"value":{"type":"uuid","refTable":"Queue"}}},"external_ids":{"type":{"max":"unlimited","min":0,"key":"string","value":"string"}},"other_config":{"type":{"max":"unlimited","min":0,"key":"string","value":"string"}},"type":{"type":"string"}}},"Datapath":{"columns":{"ct_zones":{"type":{"max":"unlimited","min":0,"key":{"minInteger":0,"maxInteger":65535,"type":"integer"},"value":{"type":"uuid","refTable":"CT_Zone"}}},"external_ids":{"type":{"max":"unlimited","min":0,"key":"string","value":"string"}},"capabilities":{"type":{"max":"unlimited","min":0,"key":"string","value":"string"}},"datapath_version":{"type":"string"}}},"SSL":{"maxRows":1,"columns":{"bootstrap_ca_cert":{"type":"boolean"},"private_key":{"type":"string"},"certificate":{"type":"string"},"external_ids":{"type":{"max":"unlimited","min":0,"key":"string","value":"string"}},"ca_cert":{"type":"string"}}},"Port":{"indexes":[["name"]],"columns":{"protected":{"type":"boolean"},"statistics":{"ephemeral":true,"type":{"max":"unlimited","min":0,"key":"string","value":"integer"}},"bond_downdelay":{"type":"integer"},"name":{"mutable":false,"type":"string"},"mac":{"type":{"min":0,"key":"string"}},"fake_bridge":{"type":"boolean"},"trunks":{"type":{"max":4096,"min":0,"key":{"minInteger":0,"maxInteger":4095,"type":"integer"}}},"rstp_status":{"ephemeral":true,"type":{"max":"unlimited","min":0,"key":"string","value":"string"}},"tag":{"type":{"min":0,"key":{"minInteger":0,"maxInteger":4095,"type":"integer"}}},"cvlans":{"type":{"max":4096,"min":0,"key":{"minInteger":0,"maxInteger":4095,"type":"integer"}}},"bond_updelay":{"type":"integer"},"bond_active_slave":{"type":{"min":0,"key":"string"}},"status":{"ephemeral":true,"type":{"max":"unlimited","min":0,"key":"string","value":"string"}},"external_ids":{"type":{"max":"unlimited","min":0,"key":"string","value":"string"}},"other_config":{"type":{"max":"unlimited","min":0,"key":"string","value":"string"}},"qos":{"type":{"min":0,"key":{"type":"uuid","refTable":"QoS"}}},"bond_mode":{"type":{"min":0,"key":{"type":"string","enum":["set",["active-backup","balance-slb","balance-tcp"]]}}},"rstp_statistics":{"ephemeral":true,"type":{"max":"unlimited","min":0,"key":"string","value":"integer"}},"vlan_mode":{"type":{"min":0,"key":{"type":"string","enum":["set",["access","dot1q-tunnel","native-tagged","native-untagged","trunk"]]}}},"interfaces":{"type":{"max":"unlimited","key":{"type":"uuid","refTable":"Interface"}}},"bond_fake_iface":{"type":"boolean"},"lacp":{"type":{"min":0,"key":{"type":"string","enum":["set",["active","off","passive"]]}}}}},"sFlow":{"columns":{"agent":{"type":{"min":0,"key":"string"}},"header":{"type":{"min":0,"key":"integer"}},"polling":{"type":{"min":0,"key":"integer"}},"external_ids":{"type":{"max":"unlimited","min":0,"key":"string","value":"string"}},"sampling":{"type":{"min":0,"key":"integer"}},"targets":{"type":{"max":"unlimited","key":"string"}}}},"Flow_Sample_Collector_Set":{"isRoot":true,"indexes":[["id","bridge"]],"columns":{"id":{"type":{"key":{"minInteger":0,"maxInteger":4294967295,"type":"integer"}}},"external_ids":{"type":{"max":"unlimited","min":0,"key":"string","value":"string"}},"ipfix":{"type":{"min":0,"key":{"type":"uuid","refTable":"IPFIX"}}},"bridge":{"type":{"key":{"type":"uuid","refTable":"Bridge"}}}}},"CT_Timeout_Policy":{"columns":{"external_ids":{"type":{"max":"unlimited","min":0,"key":"string","value":"string"}},"timeouts":{"type":{"max":"unlimited","min":0,"key":{"type":"string","enum":["set",["icmp_first","icmp_reply","tcp_close","tcp_close_wait","tcp_established","tcp_fin_wait","tcp_last_ack","tcp_retransmit","tcp_syn_recv","tcp_syn_sent","tcp_syn_sent2","tcp_time_wait","tcp_unack","udp_first","udp_multiple","udp_single"]]},"value":{"minInteger":0,"maxInteger":4294967295,"type":"integer"}}}}},"Mirror":{"columns":{"select_all":{"type":"boolean"},"statistics":{"ephemeral":true,"type":{"max":"unlimited","min":0,"key":"string","value":"integer"}},"name":{"type":"string"},"output_vlan":{"type":{"min":0,"key":{"minInteger":1,"maxInteger":4095,"type":"integer"}}},"select_dst_port":{"type":{"max":"unlimited","min":0,"key":{"refType":"weak","type":"uuid","refTable":"Port"}}},"select_src_port":{"type":{"max":"unlimited","min":0,"key":{"refType":"weak","type":"uuid","refTable":"Port"}}},"external_ids":{"type":{"max":"unlimited","min":0,"key":"string","value":"string"}},"snaplen":{"type":{"min":0,"key":{"minInteger":14,"maxInteger":65535,"type":"integer"}}},"output_port":{"type":{"min":0,"key":{"refType":"weak","type":"uuid","refTable":"Port"}}},"select_vlan":{"type":{"max":4096,"min":0,"key":{"minInteger":0,"maxInteger":4095,"type":"integer"}}}}},"Flow_Table":{"columns":{"name":{"type":{"min":0,"key":"string"}},"prefixes":{"type":{"max":3,"min":0,"key":"string"}},"groups":{"type":{"max":"unlimited","min":0,"key":"string"}},"external_ids":{"type":{"max":"unlimited","min":0,"key":"string","value":"string"}},"overflow_policy":{"type":{"min":0,"key":{"type":"string","enum":["set",["evict","refuse"]]}}},"flow_limit":{"type":{"min":0,"key":{"minInteger":0,"type":"integer"}}}}},"AutoAttach":{"columns":{"mappings":{"type":{"max":"unlimited","min":0,"key":{"minInteger":0,"maxInteger":16777215,"type":"integer"},"value":{"minInteger":0,"maxInteger":4095,"type":"integer"}}},"system_name":{"type":"string"},"system_description":{"type":"string"}}},"Interface":{"indexes":[["name"]],"columns":{"statistics":{"ephemeral":true,"type":{"max":"unlimited","min":0,"key":"string","value":"integer"}},"mac":{"type":{"min":0,"key":"string"}},"options":{"type":{"max":"unlimited","min":0,"key":"string","value":"string"}},"ingress_policing_kpkts_rate":{"type":{"key":{"minInteger":0,"type":"integer"}}},"bfd_status":{"type":{"max":"unlimited","min":0,"key":"string","value":"string"}},"cfm_health":{"ephemeral":true,"type":{"min":0,"key":{"minInteger":0,"maxInteger":100,"type":"integer"}}},"ofport":{"type":{"min":0,"key":"integer"}},"admin_state":{"ephemeral":true,"type":{"min":0,"key":{"type":"string","enum":["set",["down","up"]]}}},"error":{"type":{"min":0,"key":"string"}},"cfm_fault_status":{"ephemeral":true,"type":{"max":"unlimited","min":0,"key":"string"}},"mtu":{"ephemeral":true,"type":{"min":0,"key":"integer"}},"ingress_policing_kpkts_burst":{"type":{"key":{"minInteger":0,"type":"integer"}}},"lacp_current":{"ephemeral":true,"type":{"min":0,"key":"boolean"}},"status":{"ephemeral":true,"type":{"max":"unlimited","min":0,"key":"string","value":"string"}},"external_ids":{"type":{"max":"unlimited","min":0,"key":"string","value":"string"}},"ofport_request":{"type":{"min":0,"key":{"minInteger":1,"maxInteger":65279,"type":"integer"}}},"link_state":{"ephemeral":true,"type":{"min":0,"key":{"type":"string","enum":["set",["down","up"]]}}},"cfm_remote_opstate":{"ephemeral":true,"type":{"min":0,"key":{"type":"string","enum":["set",["down","up"]]}}},"cfm_fault":{"ephemeral":true,"type":{"min":0,"key":"boolean"}},"link_speed":{"ephemeral":true,"type":{"min":0,"key":"integer"}},"duplex":{"ephemeral":true,"type":{"min":0,"key":{"type":"string","enum":["set",["full","half"]]}}},"ingress_policing_rate":{"type":{"key":{"minInteger":0,"type":"integer"}}},"name":{"mutable":false,"type":"string"},"mtu_request":{"type":{"min":0,"key":{"minInteger":1,"type":"integer"}}},"ifindex":{"ephemeral":true,"type":{"min":0,"key":{"minInteger":0,"maxInteger":4294967295,"type":"integer"}}},"cfm_flap_count":{"type":{"min":0,"key":"integer"}},"type":{"type":"string"},"mac_in_use":{"ephemeral":true,"type":{"min":0,"key":"string"}},"link_resets":{"ephemeral":true,"type":{"min":0,"key":"integer"}},"lldp":{"type":{"max":"unlimited","min":0,"key":"string","value":"string"}},"other_config":{"type":{"max":"unlimited","min":0,"key":"string","value":"string"}},"bfd":{"type":{"max":"unlimited","min":0,"key":"string","value":"string"}},"cfm_remote_mpids":{"ephemeral":true,"type":{"max":"unlimited","min":0,"key":"integer"}},"cfm_mpid":{"type":{"min":0,"key":"integer"}},"ingress_policing_burst":{"type":{"key":{"minInteger":0,"type":"integer"}}}}},"Manager":{"indexes":[["target"]],"columns":{"is_connected":{"ephemeral":true,"type":"boolean"},"connection_mode":{"type":{"min":0,"key":{"type":"string","enum":["set",["in-band","out-of-band"]]}}},"other_config":{"type":{"max":"unlimited","min":0,"key":"string","value":"string"}},"external_ids":{"type":{"max":"unlimited","min":0,"key":"string","value":"string"}},"status":{"ephemeral":true,"type":{"max":"unlimited","min":0,"key":"string","value":"string"}},"target":{"type":"string"},"inactivity_probe":{"type":{"min":0,"key":"integer"}},"max_backoff":{"type":{"min":0,"key":{"minInteger":1000,"type":"integer"}}}}}}}
+OVSDB JSON 169 ab4aa51eed6092c46df8b3adb91fb0079fcda59a
+{"_date":1759771043531,"_is_diff":true,"Open_vSwitch":{"e3d8639f-b7c6-4158-90e3-fd9848c9624f":{}},"_comment":"ovs-vsctl (invoked by /bin/sh): ovs-vsctl --no-wait init"}
+OVSDB JSON 284 a6bb1f639126d90256ed3db49850c338e391db1b
+{"_date":1759771043532,"Open_vSwitch":{"e3d8639f-b7c6-4158-90e3-fd9848c9624f":{"datapath_types":["set",["netdev","system"]],"iface_types":["set",["bareudp","erspan","geneve","gre","gtpu","internal","ip6erspan","ip6gre","lisp","patch","stt","system","tap","vxlan"]]}},"_is_diff":true}
+OVSDB JSON 120 c85154d739022a7d212ae7a8e3a00a75497dd770
+{"_date":1759771043532,"Open_vSwitch":{"e3d8639f-b7c6-4158-90e3-fd9848c9624f":{"dpdk_version":"none"}},"_is_diff":true}
+OVSDB JSON 566 be4e1cdd6c8f9b3bb8ea8d1659e80782d2fa7f67
+{"Interface":{"51841de7-e367-4989-87b6-6737fa1a2d95":{"name":"br0","type":"internal"}},"Port":{"33947d9d-5eae-4119-927f-27126c43f4a2":{"name":"br0","interfaces":["uuid","51841de7-e367-4989-87b6-6737fa1a2d95"]}},"_date":1759771043540,"Bridge":{"706ab9c6-d550-41f1-80fe-7355a965e037":{"name":"br0","ports":["uuid","33947d9d-5eae-4119-927f-27126c43f4a2"]}},"_is_diff":true,"_comment":"ovs-vsctl (invoked by /bin/sh): ovs-vsctl add-br br0","Open_vSwitch":{"e3d8639f-b7c6-4158-90e3-fd9848c9624f":{"bridges":["uuid","706ab9c6-d550-41f1-80fe-7355a965e037"],"next_cfg":1}}}
+OVSDB JSON 180 86497c4fa81b36ad276188d96c997a8c448eea8f
+{"Interface":{"51841de7-e367-4989-87b6-6737fa1a2d95":{"ofport":65534}},"_date":1759771043567,"_is_diff":true,"Open_vSwitch":{"e3d8639f-b7c6-4158-90e3-fd9848c9624f":{"cur_cfg":1}}}
+OVSDB JSON 123 d35c18f02a6e30361ddae136565ef77e72d9b626
+{"_date":1759771043568,"Bridge":{"706ab9c6-d550-41f1-80fe-7355a965e037":{"datapath_version":"<unknown>"}},"_is_diff":true}
+OVSDB JSON 279 aadb3647446b13642bbf91cd3d54bde4376171ce
+{"_date":1759771043578,"Bridge":{"706ab9c6-d550-41f1-80fe-7355a965e037":{"datapath_type":"netdev"}},"_is_diff":true,"_comment":"ovs-vsctl (invoked by /bin/sh): ovs-vsctl set bridge br0 datapath_type=netdev","Open_vSwitch":{"e3d8639f-b7c6-4158-90e3-fd9848c9624f":{"next_cfg":2}}}
+OVSDB JSON 110 1528e4f337a0fd0f4ca48684f24acdfa0a083055
+{"_date":1759771043889,"Open_vSwitch":{"e3d8639f-b7c6-4158-90e3-fd9848c9624f":{"cur_cfg":2}},"_is_diff":true}
+OVSDB JSON 124 76c5c3ce11a960c8ac484b07fbb99212f9e863c1
+{"_date":1759771043890,"Bridge":{"706ab9c6-d550-41f1-80fe-7355a965e037":{"datapath_version":"<built-in>"}},"_is_diff":true}
+OVSDB JSON 566 7f1015f9ade9f711b7e1cd9f1feb4cd0b7aa76d1
+{"Interface":{"04f03f75-40dd-4602-b665-829c374e9f7c":{"name":"br1","type":"internal"}},"Port":{"603856f1-f55e-44a2-8b66-d13b037c58fd":{"name":"br1","interfaces":["uuid","04f03f75-40dd-4602-b665-829c374e9f7c"]}},"_date":1759771043911,"Bridge":{"e85b8a75-edb5-40e4-94a9-efb0b6d2ad43":{"name":"br1","ports":["uuid","603856f1-f55e-44a2-8b66-d13b037c58fd"]}},"_is_diff":true,"_comment":"ovs-vsctl (invoked by /bin/sh): ovs-vsctl add-br br1","Open_vSwitch":{"e3d8639f-b7c6-4158-90e3-fd9848c9624f":{"bridges":["uuid","e85b8a75-edb5-40e4-94a9-efb0b6d2ad43"],"next_cfg":3}}}
+OVSDB JSON 180 41b6ec2c5358adc9d6ab7ca2528f15c6ae1a9b1d
+{"Interface":{"04f03f75-40dd-4602-b665-829c374e9f7c":{"ofport":65534}},"_date":1759771043941,"_is_diff":true,"Open_vSwitch":{"e3d8639f-b7c6-4158-90e3-fd9848c9624f":{"cur_cfg":3}}}
+OVSDB JSON 123 f10bf06484c110862b7d5d9349f9ac49f225fa96
+{"_date":1759771043942,"Bridge":{"e85b8a75-edb5-40e4-94a9-efb0b6d2ad43":{"datapath_version":"<unknown>"}},"_is_diff":true}
+OVSDB JSON 279 d016a64fd71ea990f7dc2939d7720a8989323a0c
+{"_date":1759771043963,"Bridge":{"e85b8a75-edb5-40e4-94a9-efb0b6d2ad43":{"datapath_type":"netdev"}},"_is_diff":true,"_comment":"ovs-vsctl (invoked by /bin/sh): ovs-vsctl set bridge br1 datapath_type=netdev","Open_vSwitch":{"e3d8639f-b7c6-4158-90e3-fd9848c9624f":{"next_cfg":4}}}
+OVSDB JSON 110 8280ff01510d521cbae5c77d429401d6fc59a129
+{"_date":1759771044066,"Open_vSwitch":{"e3d8639f-b7c6-4158-90e3-fd9848c9624f":{"cur_cfg":4}},"_is_diff":true}
+OVSDB JSON 124 1a66baa92305427f960b4e0a51af2df9c40ee6ff
+{"_date":1759771044066,"Bridge":{"e85b8a75-edb5-40e4-94a9-efb0b6d2ad43":{"datapath_version":"<built-in>"}},"_is_diff":true}
+OVSDB JSON 566 edabb16fa6c261a2f57069eedf32a3e0050848d1
+{"Interface":{"d7541f55-820d-4e28-86b9-9689233bac9d":{"name":"br2","type":"internal"}},"Port":{"8bc5da65-8c34-49ac-b2ce-5397e82f89be":{"name":"br2","interfaces":["uuid","d7541f55-820d-4e28-86b9-9689233bac9d"]}},"_date":1759771044077,"Bridge":{"16113404-e02d-484c-84b0-0cfb405db610":{"name":"br2","ports":["uuid","8bc5da65-8c34-49ac-b2ce-5397e82f89be"]}},"_is_diff":true,"_comment":"ovs-vsctl (invoked by /bin/sh): ovs-vsctl add-br br2","Open_vSwitch":{"e3d8639f-b7c6-4158-90e3-fd9848c9624f":{"bridges":["uuid","16113404-e02d-484c-84b0-0cfb405db610"],"next_cfg":5}}}
+OVSDB JSON 180 6ddff24a4c91f357985e7bcbe2e5037d219ebb88
+{"Interface":{"d7541f55-820d-4e28-86b9-9689233bac9d":{"ofport":65534}},"_date":1759771044130,"_is_diff":true,"Open_vSwitch":{"e3d8639f-b7c6-4158-90e3-fd9848c9624f":{"cur_cfg":5}}}
+OVSDB JSON 123 a0a787d94709ae9d16430c94917e053aaabb11ea
+{"_date":1759771044131,"Bridge":{"16113404-e02d-484c-84b0-0cfb405db610":{"datapath_version":"<unknown>"}},"_is_diff":true}
+OVSDB JSON 279 1a2fbadd87e1ee237a91c97202409d3f2eeb76d9
+{"_date":1759771044160,"Bridge":{"16113404-e02d-484c-84b0-0cfb405db610":{"datapath_type":"netdev"}},"_is_diff":true,"_comment":"ovs-vsctl (invoked by /bin/sh): ovs-vsctl set bridge br2 datapath_type=netdev","Open_vSwitch":{"e3d8639f-b7c6-4158-90e3-fd9848c9624f":{"next_cfg":6}}}
+OVSDB JSON 110 9a6f12f091a06e08667234ec9878cc25425f372e
+{"_date":1759771044238,"Open_vSwitch":{"e3d8639f-b7c6-4158-90e3-fd9848c9624f":{"cur_cfg":6}},"_is_diff":true}
+OVSDB JSON 124 2e9aa946d9b783d691e3e4749426a374f44a52a4
+{"_date":1759771044239,"Bridge":{"16113404-e02d-484c-84b0-0cfb405db610":{"datapath_version":"<built-in>"}},"_is_diff":true}
+OVSDB JSON 566 7e41c69c7b7b7a4663ff9ed8eddb181aefe8df55
+{"Port":{"a26540a8-f368-4533-a12b-23b0c70bfd01":{"name":"br3","interfaces":["uuid","a483dc0b-a2cd-45d9-bd0a-345425b85583"]}},"Interface":{"a483dc0b-a2cd-45d9-bd0a-345425b85583":{"name":"br3","type":"internal"}},"_date":1759771044257,"Bridge":{"41ad07c5-a548-4583-890d-8e5929348d62":{"name":"br3","ports":["uuid","a26540a8-f368-4533-a12b-23b0c70bfd01"]}},"_is_diff":true,"_comment":"ovs-vsctl (invoked by /bin/sh): ovs-vsctl add-br br3","Open_vSwitch":{"e3d8639f-b7c6-4158-90e3-fd9848c9624f":{"bridges":["uuid","41ad07c5-a548-4583-890d-8e5929348d62"],"next_cfg":7}}}
+OVSDB JSON 180 aa8ff83de4d6e207da682c41e85c012483bf15a3
+{"Interface":{"a483dc0b-a2cd-45d9-bd0a-345425b85583":{"ofport":65534}},"_date":1759771044320,"_is_diff":true,"Open_vSwitch":{"e3d8639f-b7c6-4158-90e3-fd9848c9624f":{"cur_cfg":7}}}
+OVSDB JSON 123 ac36635ca869a48db0e55b5d0c4c1f18a51c4211
+{"_date":1759771044320,"Bridge":{"41ad07c5-a548-4583-890d-8e5929348d62":{"datapath_version":"<unknown>"}},"_is_diff":true}
+OVSDB JSON 279 eabde94fa3224049250207638b4f863b4066bafe
+{"_date":1759771044329,"Bridge":{"41ad07c5-a548-4583-890d-8e5929348d62":{"datapath_type":"netdev"}},"_is_diff":true,"_comment":"ovs-vsctl (invoked by /bin/sh): ovs-vsctl set bridge br3 datapath_type=netdev","Open_vSwitch":{"e3d8639f-b7c6-4158-90e3-fd9848c9624f":{"next_cfg":8}}}
+OVSDB JSON 110 87289077aa5b1e93a2e2cb49289460e83ad50d97
+{"_date":1759771044418,"Open_vSwitch":{"e3d8639f-b7c6-4158-90e3-fd9848c9624f":{"cur_cfg":8}},"_is_diff":true}
+OVSDB JSON 124 62604bcb166b46e412ae52d13617517da3723fb1
+{"_date":1759771044419,"Bridge":{"41ad07c5-a548-4583-890d-8e5929348d62":{"datapath_version":"<built-in>"}},"_is_diff":true}
+OVSDB JSON 486 75e101d835427d11b885d3f89baf0b9ebbf78dec
+{"Port":{"3169bf20-ad8a-42ba-b3a7-638e5ba4db91":{"name":"eth0","interfaces":["uuid","13c8f535-fe25-4129-ba1e-7a12d0452559"]}},"Interface":{"13c8f535-fe25-4129-ba1e-7a12d0452559":{"name":"eth0"}},"_date":1759771044434,"Bridge":{"706ab9c6-d550-41f1-80fe-7355a965e037":{"ports":["uuid","3169bf20-ad8a-42ba-b3a7-638e5ba4db91"]}},"_is_diff":true,"_comment":"ovs-vsctl (invoked by /bin/sh): ovs-vsctl add-port br0 eth0","Open_vSwitch":{"e3d8639f-b7c6-4158-90e3-fd9848c9624f":{"next_cfg":9}}}
+OVSDB JSON 176 05d9459a862967141d617503963c59842d83c4d7
+{"Interface":{"13c8f535-fe25-4129-ba1e-7a12d0452559":{"ofport":1}},"_date":1759771044439,"_is_diff":true,"Open_vSwitch":{"e3d8639f-b7c6-4158-90e3-fd9848c9624f":{"cur_cfg":9}}}
+OVSDB JSON 487 6560a4fd9e851769892ade81ac6ed1cc19a7b247
+{"Interface":{"83b4972f-a03b-446c-8cda-451ecf16c2a8":{"name":"eth1"}},"Port":{"089db383-88f1-4365-be96-241ee823fb39":{"name":"eth1","interfaces":["uuid","83b4972f-a03b-446c-8cda-451ecf16c2a8"]}},"_date":1759771044451,"Bridge":{"706ab9c6-d550-41f1-80fe-7355a965e037":{"ports":["uuid","089db383-88f1-4365-be96-241ee823fb39"]}},"_is_diff":true,"_comment":"ovs-vsctl (invoked by /bin/sh): ovs-vsctl add-port br0 eth1","Open_vSwitch":{"e3d8639f-b7c6-4158-90e3-fd9848c9624f":{"next_cfg":10}}}
+OVSDB JSON 177 313470c3b20bc623abf9c836f0c5877b717c0810
+{"Interface":{"83b4972f-a03b-446c-8cda-451ecf16c2a8":{"ofport":2}},"_date":1759771044456,"_is_diff":true,"Open_vSwitch":{"e3d8639f-b7c6-4158-90e3-fd9848c9624f":{"cur_cfg":10}}}
+OVSDB JSON 487 3f6d944e030fba0cd6dffcc69f37163ad1cc8293
+{"Interface":{"996ef42e-ccbf-4bfe-a109-098bea224863":{"name":"eth2"}},"Port":{"dc35eefa-213d-4e7a-be1e-33cf96e23e79":{"name":"eth2","interfaces":["uuid","996ef42e-ccbf-4bfe-a109-098bea224863"]}},"_date":1759771044467,"Bridge":{"706ab9c6-d550-41f1-80fe-7355a965e037":{"ports":["uuid","dc35eefa-213d-4e7a-be1e-33cf96e23e79"]}},"_is_diff":true,"_comment":"ovs-vsctl (invoked by /bin/sh): ovs-vsctl add-port br0 eth2","Open_vSwitch":{"e3d8639f-b7c6-4158-90e3-fd9848c9624f":{"next_cfg":11}}}
+OVSDB JSON 177 cf5db496ab4c58812e81a6f61f91c5201830a008
+{"Interface":{"996ef42e-ccbf-4bfe-a109-098bea224863":{"ofport":3}},"_date":1759771044471,"_is_diff":true,"Open_vSwitch":{"e3d8639f-b7c6-4158-90e3-fd9848c9624f":{"cur_cfg":11}}}
+OVSDB JSON 487 32051ce52ce259010cec43b1619c0b200b979773
+{"Interface":{"333d2782-18c7-4728-a30b-6036323c97ac":{"name":"eth3"}},"Port":{"9711f433-6748-48f8-8397-c1e2e5a72268":{"name":"eth3","interfaces":["uuid","333d2782-18c7-4728-a30b-6036323c97ac"]}},"_date":1759771044482,"Bridge":{"706ab9c6-d550-41f1-80fe-7355a965e037":{"ports":["uuid","9711f433-6748-48f8-8397-c1e2e5a72268"]}},"_is_diff":true,"_comment":"ovs-vsctl (invoked by /bin/sh): ovs-vsctl add-port br0 eth3","Open_vSwitch":{"e3d8639f-b7c6-4158-90e3-fd9848c9624f":{"next_cfg":12}}}
+OVSDB JSON 177 097e018a1ea9567bbcb93015f5e30b1349a8b039
+{"Interface":{"333d2782-18c7-4728-a30b-6036323c97ac":{"ofport":4}},"_date":1759771044488,"_is_diff":true,"Open_vSwitch":{"e3d8639f-b7c6-4158-90e3-fd9848c9624f":{"cur_cfg":12}}}
+OVSDB JSON 487 cf6efe6ca61ecce9f55745ad5cff30ca583aa0b2
+{"Port":{"567b49a1-6ac5-478d-a74e-36e5cf22ceac":{"name":"eth4","interfaces":["uuid","28db3461-3c0a-47a6-a7c4-895b71a0559f"]}},"Interface":{"28db3461-3c0a-47a6-a7c4-895b71a0559f":{"name":"eth4"}},"_date":1759771044500,"Bridge":{"706ab9c6-d550-41f1-80fe-7355a965e037":{"ports":["uuid","567b49a1-6ac5-478d-a74e-36e5cf22ceac"]}},"_is_diff":true,"_comment":"ovs-vsctl (invoked by /bin/sh): ovs-vsctl add-port br0 eth4","Open_vSwitch":{"e3d8639f-b7c6-4158-90e3-fd9848c9624f":{"next_cfg":13}}}
+OVSDB JSON 177 0db7b492f31a56ef682bf980278d2b9d9a4da8ad
+{"Interface":{"28db3461-3c0a-47a6-a7c4-895b71a0559f":{"ofport":5}},"_date":1759771044505,"_is_diff":true,"Open_vSwitch":{"e3d8639f-b7c6-4158-90e3-fd9848c9624f":{"cur_cfg":13}}}
+OVSDB JSON 487 f09de3c0b253ba53d7066a042d07409073583e22
+{"Port":{"fc01aac3-5c22-4684-928d-841e52346026":{"name":"eth5","interfaces":["uuid","bce1492d-ed80-4717-b799-d94ec5497e4a"]}},"Interface":{"bce1492d-ed80-4717-b799-d94ec5497e4a":{"name":"eth5"}},"_date":1759771044520,"Bridge":{"706ab9c6-d550-41f1-80fe-7355a965e037":{"ports":["uuid","fc01aac3-5c22-4684-928d-841e52346026"]}},"_is_diff":true,"_comment":"ovs-vsctl (invoked by /bin/sh): ovs-vsctl add-port br0 eth5","Open_vSwitch":{"e3d8639f-b7c6-4158-90e3-fd9848c9624f":{"next_cfg":14}}}
+OVSDB JSON 177 5ea91c4a23d46841173b882e146555557f101413
+{"Interface":{"bce1492d-ed80-4717-b799-d94ec5497e4a":{"ofport":6}},"_date":1759771044529,"_is_diff":true,"Open_vSwitch":{"e3d8639f-b7c6-4158-90e3-fd9848c9624f":{"cur_cfg":14}}}
+OVSDB JSON 487 7b91bd79375a56ff07731285cf2fc948d9b2cbd8
+{"Interface":{"97dc88e6-cdb2-4e0e-a70f-729d0a7dbc9b":{"name":"eth6"}},"Port":{"97a3feaf-8a20-4a4b-a33a-2518f3ae7bf0":{"name":"eth6","interfaces":["uuid","97dc88e6-cdb2-4e0e-a70f-729d0a7dbc9b"]}},"_date":1759771044542,"Bridge":{"706ab9c6-d550-41f1-80fe-7355a965e037":{"ports":["uuid","97a3feaf-8a20-4a4b-a33a-2518f3ae7bf0"]}},"_is_diff":true,"_comment":"ovs-vsctl (invoked by /bin/sh): ovs-vsctl add-port br0 eth6","Open_vSwitch":{"e3d8639f-b7c6-4158-90e3-fd9848c9624f":{"next_cfg":15}}}
+OVSDB JSON 177 6ffe977421eed6536662d6fb237acefcfa7baf97
+{"Interface":{"97dc88e6-cdb2-4e0e-a70f-729d0a7dbc9b":{"ofport":7}},"_date":1759771044548,"_is_diff":true,"Open_vSwitch":{"e3d8639f-b7c6-4158-90e3-fd9848c9624f":{"cur_cfg":15}}}
+OVSDB JSON 487 3b7fd4528c2b77c184a733829cee76e3e3412179
+{"Interface":{"03d74e6d-21b7-4567-a7c7-622fbbc00768":{"name":"eth7"}},"Port":{"9a5e4b13-13b9-4243-8ee3-6e60f12fd9a2":{"name":"eth7","interfaces":["uuid","03d74e6d-21b7-4567-a7c7-622fbbc00768"]}},"_date":1759771044572,"Bridge":{"706ab9c6-d550-41f1-80fe-7355a965e037":{"ports":["uuid","9a5e4b13-13b9-4243-8ee3-6e60f12fd9a2"]}},"_is_diff":true,"_comment":"ovs-vsctl (invoked by /bin/sh): ovs-vsctl add-port br0 eth7","Open_vSwitch":{"e3d8639f-b7c6-4158-90e3-fd9848c9624f":{"next_cfg":16}}}
+OVSDB JSON 177 4c75fe9c48fa10ed817f7994e3fb5cf2ab9458be
+{"Interface":{"03d74e6d-21b7-4567-a7c7-622fbbc00768":{"ofport":8}},"_date":1759771044580,"_is_diff":true,"Open_vSwitch":{"e3d8639f-b7c6-4158-90e3-fd9848c9624f":{"cur_cfg":16}}}
+OVSDB JSON 487 1f1d3990396a43564116af1a664013af2fbec03e
+{"Interface":{"076c3b1c-5c12-492e-9207-55285b293456":{"name":"eth8"}},"Port":{"995f9b80-cb94-4b75-a3fa-43a09241ff48":{"name":"eth8","interfaces":["uuid","076c3b1c-5c12-492e-9207-55285b293456"]}},"_date":1759771044592,"Bridge":{"706ab9c6-d550-41f1-80fe-7355a965e037":{"ports":["uuid","995f9b80-cb94-4b75-a3fa-43a09241ff48"]}},"_is_diff":true,"_comment":"ovs-vsctl (invoked by /bin/sh): ovs-vsctl add-port br0 eth8","Open_vSwitch":{"e3d8639f-b7c6-4158-90e3-fd9848c9624f":{"next_cfg":17}}}
+OVSDB JSON 177 94a7ffb60d014cda76d0525ef11bbda972894075
+{"Interface":{"076c3b1c-5c12-492e-9207-55285b293456":{"ofport":9}},"_date":1759771044600,"_is_diff":true,"Open_vSwitch":{"e3d8639f-b7c6-4158-90e3-fd9848c9624f":{"cur_cfg":17}}}
+OVSDB JSON 487 23ee8da508b19460f964b100ca5af8a2b2f711f7
+{"Port":{"fc3c6f47-0a46-4921-a67d-661f12851085":{"name":"eth9","interfaces":["uuid","f8f0d33a-0a31-4e86-818e-b172aa2303af"]}},"Interface":{"f8f0d33a-0a31-4e86-818e-b172aa2303af":{"name":"eth9"}},"_date":1759771044611,"Bridge":{"706ab9c6-d550-41f1-80fe-7355a965e037":{"ports":["uuid","fc3c6f47-0a46-4921-a67d-661f12851085"]}},"_is_diff":true,"_comment":"ovs-vsctl (invoked by /bin/sh): ovs-vsctl add-port br0 eth9","Open_vSwitch":{"e3d8639f-b7c6-4158-90e3-fd9848c9624f":{"next_cfg":18}}}
+OVSDB JSON 178 38c9a9f38a7cb9f4fe24e391e4c7d0b556b54d6a
+{"Interface":{"f8f0d33a-0a31-4e86-818e-b172aa2303af":{"ofport":10}},"_date":1759771044625,"_is_diff":true,"Open_vSwitch":{"e3d8639f-b7c6-4158-90e3-fd9848c9624f":{"cur_cfg":18}}}
+OVSDB JSON 490 635c2f233557d1da0189980c8098afb3d8a64de2
+{"Interface":{"7e1c4cb4-68e7-45c5-a659-c4f301d35bb5":{"name":"eth10"}},"Port":{"2891c3f4-9ef8-4623-93de-f0523225aa53":{"name":"eth10","interfaces":["uuid","7e1c4cb4-68e7-45c5-a659-c4f301d35bb5"]}},"_date":1759771044637,"Bridge":{"706ab9c6-d550-41f1-80fe-7355a965e037":{"ports":["uuid","2891c3f4-9ef8-4623-93de-f0523225aa53"]}},"_is_diff":true,"_comment":"ovs-vsctl (invoked by /bin/sh): ovs-vsctl add-port br0 eth10","Open_vSwitch":{"e3d8639f-b7c6-4158-90e3-fd9848c9624f":{"next_cfg":19}}}
+OVSDB JSON 178 f4bfd14dd649c76e7e0f0e2d0bf6f31093ea0d58
+{"Interface":{"7e1c4cb4-68e7-45c5-a659-c4f301d35bb5":{"ofport":11}},"_date":1759771044645,"_is_diff":true,"Open_vSwitch":{"e3d8639f-b7c6-4158-90e3-fd9848c9624f":{"cur_cfg":19}}}
+OVSDB JSON 490 44097af5b0ab49fcb7dfce2f34974f3a0e63e044
+{"Port":{"a6f299cf-d30c-4c24-b167-3ddd0c0b9050":{"name":"eth11","interfaces":["uuid","b4653ed6-8d16-4053-a6be-0d880d9b0b81"]}},"Interface":{"b4653ed6-8d16-4053-a6be-0d880d9b0b81":{"name":"eth11"}},"_date":1759771044657,"Bridge":{"706ab9c6-d550-41f1-80fe-7355a965e037":{"ports":["uuid","a6f299cf-d30c-4c24-b167-3ddd0c0b9050"]}},"_is_diff":true,"_comment":"ovs-vsctl (invoked by /bin/sh): ovs-vsctl add-port br0 eth11","Open_vSwitch":{"e3d8639f-b7c6-4158-90e3-fd9848c9624f":{"next_cfg":20}}}
+OVSDB JSON 178 26862ccd3837e7a211003b482601592f79f584c2
+{"Interface":{"b4653ed6-8d16-4053-a6be-0d880d9b0b81":{"ofport":12}},"_date":1759771044667,"_is_diff":true,"Open_vSwitch":{"e3d8639f-b7c6-4158-90e3-fd9848c9624f":{"cur_cfg":20}}}
+OVSDB JSON 490 d9270ad862e831dfbad268231890e116146921b6
+{"Port":{"e73e6152-d4f1-4f4a-852a-90b0d446e468":{"name":"eth12","interfaces":["uuid","4857e04e-fb80-4a2d-a74c-bd4bcba47df0"]}},"Interface":{"4857e04e-fb80-4a2d-a74c-bd4bcba47df0":{"name":"eth12"}},"_date":1759771044681,"Bridge":{"706ab9c6-d550-41f1-80fe-7355a965e037":{"ports":["uuid","e73e6152-d4f1-4f4a-852a-90b0d446e468"]}},"_is_diff":true,"_comment":"ovs-vsctl (invoked by /bin/sh): ovs-vsctl add-port br0 eth12","Open_vSwitch":{"e3d8639f-b7c6-4158-90e3-fd9848c9624f":{"next_cfg":21}}}
+OVSDB JSON 178 004f45f34cb697715c06d95eb9d83a2aa2729959
+{"Interface":{"4857e04e-fb80-4a2d-a74c-bd4bcba47df0":{"ofport":13}},"_date":1759771044688,"_is_diff":true,"Open_vSwitch":{"e3d8639f-b7c6-4158-90e3-fd9848c9624f":{"cur_cfg":21}}}
+OVSDB JSON 490 71bd82a2d16b33e718d943de23d36050d340e631
+{"Interface":{"5a8bb355-a54c-43a3-8269-0176b14b9462":{"name":"eth13"}},"Port":{"f2f69c7f-1d99-4bb4-a148-664a25fb8aff":{"name":"eth13","interfaces":["uuid","5a8bb355-a54c-43a3-8269-0176b14b9462"]}},"_date":1759771044699,"Bridge":{"706ab9c6-d550-41f1-80fe-7355a965e037":{"ports":["uuid","f2f69c7f-1d99-4bb4-a148-664a25fb8aff"]}},"_is_diff":true,"_comment":"ovs-vsctl (invoked by /bin/sh): ovs-vsctl add-port br0 eth13","Open_vSwitch":{"e3d8639f-b7c6-4158-90e3-fd9848c9624f":{"next_cfg":22}}}
+OVSDB JSON 178 afc61a6e1778d10f66ea618bcc58f14f08341f54
+{"Interface":{"5a8bb355-a54c-43a3-8269-0176b14b9462":{"ofport":14}},"_date":1759771044712,"_is_diff":true,"Open_vSwitch":{"e3d8639f-b7c6-4158-90e3-fd9848c9624f":{"cur_cfg":22}}}
+OVSDB JSON 490 a0258accaa48a3c06da22143797fc31588128e62
+{"Interface":{"088418fc-6696-495b-831d-08d110c5de12":{"name":"eth14"}},"Port":{"55c2432b-dd3c-41f4-9461-3c13203b545e":{"name":"eth14","interfaces":["uuid","088418fc-6696-495b-831d-08d110c5de12"]}},"_date":1759771044725,"Bridge":{"706ab9c6-d550-41f1-80fe-7355a965e037":{"ports":["uuid","55c2432b-dd3c-41f4-9461-3c13203b545e"]}},"_is_diff":true,"_comment":"ovs-vsctl (invoked by /bin/sh): ovs-vsctl add-port br0 eth14","Open_vSwitch":{"e3d8639f-b7c6-4158-90e3-fd9848c9624f":{"next_cfg":23}}}
+OVSDB JSON 178 63f6729803ee3be58e1ff79d0770f84aef55ff4f
+{"Interface":{"088418fc-6696-495b-831d-08d110c5de12":{"ofport":15}},"_date":1759771044735,"_is_diff":true,"Open_vSwitch":{"e3d8639f-b7c6-4158-90e3-fd9848c9624f":{"cur_cfg":23}}}
+OVSDB JSON 490 2ab0eb7f9884bd6f2a3a844499ef0317f11bc9ff
+{"Interface":{"f89ac9e8-438e-444b-980e-a14d0acf91e3":{"name":"eth15"}},"Port":{"d3faf9a2-ea4b-41ba-bb05-8f70e220fda1":{"name":"eth15","interfaces":["uuid","f89ac9e8-438e-444b-980e-a14d0acf91e3"]}},"_date":1759771044748,"Bridge":{"706ab9c6-d550-41f1-80fe-7355a965e037":{"ports":["uuid","d3faf9a2-ea4b-41ba-bb05-8f70e220fda1"]}},"_is_diff":true,"_comment":"ovs-vsctl (invoked by /bin/sh): ovs-vsctl add-port br0 eth15","Open_vSwitch":{"e3d8639f-b7c6-4158-90e3-fd9848c9624f":{"next_cfg":24}}}
+OVSDB JSON 178 5cb48030e44a6b74deae85d4cb5f4db1838e94ae
+{"Interface":{"f89ac9e8-438e-444b-980e-a14d0acf91e3":{"ofport":16}},"_date":1759771044761,"_is_diff":true,"Open_vSwitch":{"e3d8639f-b7c6-4158-90e3-fd9848c9624f":{"cur_cfg":24}}}
+OVSDB JSON 1807 24fca91e7a8e84f5806b0d132ba086458bee0cf3
+{"Interface":{"996ef42e-ccbf-4bfe-a109-098bea224863":null,"97dc88e6-cdb2-4e0e-a70f-729d0a7dbc9b":null,"83b4972f-a03b-446c-8cda-451ecf16c2a8":null,"333d2782-18c7-4728-a30b-6036323c97ac":null,"5a8bb355-a54c-43a3-8269-0176b14b9462":null,"28db3461-3c0a-47a6-a7c4-895b71a0559f":null,"7e1c4cb4-68e7-45c5-a659-c4f301d35bb5":null,"088418fc-6696-495b-831d-08d110c5de12":null,"b4653ed6-8d16-4053-a6be-0d880d9b0b81":null,"bce1492d-ed80-4717-b799-d94ec5497e4a":null,"13c8f535-fe25-4129-ba1e-7a12d0452559":null,"f8f0d33a-0a31-4e86-818e-b172aa2303af":null,"076c3b1c-5c12-492e-9207-55285b293456":null,"f89ac9e8-438e-444b-980e-a14d0acf91e3":null,"51841de7-e367-4989-87b6-6737fa1a2d95":null,"03d74e6d-21b7-4567-a7c7-622fbbc00768":null,"4857e04e-fb80-4a2d-a74c-bd4bcba47df0":null},"Port":{"f2f69c7f-1d99-4bb4-a148-664a25fb8aff":null,"089db383-88f1-4365-be96-241ee823fb39":null,"3169bf20-ad8a-42ba-b3a7-638e5ba4db91":null,"dc35eefa-213d-4e7a-be1e-33cf96e23e79":null,"d3faf9a2-ea4b-41ba-bb05-8f70e220fda1":null,"567b49a1-6ac5-478d-a74e-36e5cf22ceac":null,"e73e6152-d4f1-4f4a-852a-90b0d446e468":null,"fc3c6f47-0a46-4921-a67d-661f12851085":null,"33947d9d-5eae-4119-927f-27126c43f4a2":null,"a6f299cf-d30c-4c24-b167-3ddd0c0b9050":null,"9711f433-6748-48f8-8397-c1e2e5a72268":null,"995f9b80-cb94-4b75-a3fa-43a09241ff48":null,"2891c3f4-9ef8-4623-93de-f0523225aa53":null,"9a5e4b13-13b9-4243-8ee3-6e60f12fd9a2":null,"55c2432b-dd3c-41f4-9461-3c13203b545e":null,"fc01aac3-5c22-4684-928d-841e52346026":null,"97a3feaf-8a20-4a4b-a33a-2518f3ae7bf0":null},"_date":1759771065066,"Bridge":{"706ab9c6-d550-41f1-80fe-7355a965e037":null},"_is_diff":true,"_comment":"ovs-vsctl (invoked by bash): ovs-vsctl del-br br0","Open_vSwitch":{"e3d8639f-b7c6-4158-90e3-fd9848c9624f":{"bridges":["uuid","706ab9c6-d550-41f1-80fe-7355a965e037"],"next_cfg":25}}}
+OVSDB JSON 111 b88bcafd272736e7a83456a33307e7b17e16e022
+{"_date":1759771065517,"Open_vSwitch":{"e3d8639f-b7c6-4158-90e3-fd9848c9624f":{"cur_cfg":25}},"_is_diff":true}
+OVSDB JSON 399 010bfb220c35655a27f99684f52b8b4cfec34c6a
+{"Interface":{"04f03f75-40dd-4602-b665-829c374e9f7c":null},"Port":{"603856f1-f55e-44a2-8b66-d13b037c58fd":null},"_date":1759771067480,"Bridge":{"e85b8a75-edb5-40e4-94a9-efb0b6d2ad43":null},"_is_diff":true,"_comment":"ovs-vsctl (invoked by bash): ovs-vsctl del-br br1","Open_vSwitch":{"e3d8639f-b7c6-4158-90e3-fd9848c9624f":{"bridges":["uuid","e85b8a75-edb5-40e4-94a9-efb0b6d2ad43"],"next_cfg":26}}}
+OVSDB JSON 111 35cae0d7044c3da6170ede0a938828853590b695
+{"_date":1759771067518,"Open_vSwitch":{"e3d8639f-b7c6-4158-90e3-fd9848c9624f":{"cur_cfg":26}},"_is_diff":true}
+OVSDB JSON 399 e8fa52b99f520d0b1ef1fd2e834c8dcd2e8bc1a2
+{"Interface":{"d7541f55-820d-4e28-86b9-9689233bac9d":null},"Port":{"8bc5da65-8c34-49ac-b2ce-5397e82f89be":null},"_date":1759771068973,"Bridge":{"16113404-e02d-484c-84b0-0cfb405db610":null},"_is_diff":true,"_comment":"ovs-vsctl (invoked by bash): ovs-vsctl del-br br2","Open_vSwitch":{"e3d8639f-b7c6-4158-90e3-fd9848c9624f":{"bridges":["uuid","16113404-e02d-484c-84b0-0cfb405db610"],"next_cfg":27}}}
+OVSDB JSON 111 877587f03c8819d2866ee2098ea0d8c391832d7b
+{"_date":1759771069016,"Open_vSwitch":{"e3d8639f-b7c6-4158-90e3-fd9848c9624f":{"cur_cfg":27}},"_is_diff":true}
+OVSDB JSON 399 d048622c73d0852a0112bb5495e6a6ff4ef2c2e7
+{"Interface":{"a483dc0b-a2cd-45d9-bd0a-345425b85583":null},"Port":{"a26540a8-f368-4533-a12b-23b0c70bfd01":null},"_date":1759771071758,"Bridge":{"41ad07c5-a548-4583-890d-8e5929348d62":null},"_is_diff":true,"_comment":"ovs-vsctl (invoked by bash): ovs-vsctl del-br br3","Open_vSwitch":{"e3d8639f-b7c6-4158-90e3-fd9848c9624f":{"bridges":["uuid","41ad07c5-a548-4583-890d-8e5929348d62"],"next_cfg":28}}}
+OVSDB JSON 111 71a62c7c28ccd65b33e13a485c0c382960b31c59
+{"_date":1759771071817,"Open_vSwitch":{"e3d8639f-b7c6-4158-90e3-fd9848c9624f":{"cur_cfg":28}},"_is_diff":true}
+OVSDB JSON 564 49e809dc62d3883dd4966da513c9195bc38f8b95
+{"Interface":{"b6f44ef4-dc83-4334-9d83-c6084925f6c4":{"name":"br0","type":"internal"}},"Port":{"63cd1a3c-c68b-48a9-873e-3d4e9e4e35e7":{"name":"br0","interfaces":["uuid","b6f44ef4-dc83-4334-9d83-c6084925f6c4"]}},"_date":1759771079071,"Bridge":{"b80139fe-ab20-4d0b-864d-b6ab1bd3b73b":{"name":"br0","ports":["uuid","63cd1a3c-c68b-48a9-873e-3d4e9e4e35e7"]}},"_is_diff":true,"_comment":"ovs-vsctl (invoked by bash): ovs-vsctl add-br br0","Open_vSwitch":{"e3d8639f-b7c6-4158-90e3-fd9848c9624f":{"bridges":["uuid","b80139fe-ab20-4d0b-864d-b6ab1bd3b73b"],"next_cfg":29}}}
+OVSDB JSON 181 739949abc979fee620acd7758d72deefe87f2d72
+{"Interface":{"b6f44ef4-dc83-4334-9d83-c6084925f6c4":{"ofport":65534}},"_date":1759771079095,"_is_diff":true,"Open_vSwitch":{"e3d8639f-b7c6-4158-90e3-fd9848c9624f":{"cur_cfg":29}}}
+OVSDB JSON 123 a1bc4acc6a034bc649f4cb72de68a5760b02739c
+{"_date":1759771079096,"Bridge":{"b80139fe-ab20-4d0b-864d-b6ab1bd3b73b":{"datapath_version":"<unknown>"}},"_is_diff":true}
+OVSDB JSON 383 be5594a9c9dff7232f3ce40f819e92849f455eb5
+{"_date":1759771090033,"Bridge":{"b80139fe-ab20-4d0b-864d-b6ab1bd3b73b":{"protocols":["set",["OpenFlow10","OpenFlow11","OpenFlow12","OpenFlow13","OpenFlow14"]]}},"_is_diff":true,"_comment":"ovs-vsctl (invoked by bash): ovs-vsctl set bridge br0 protocols=OpenFlow10,OpenFlow11,OpenFlow12,OpenFlow13,OpenFlow14","Open_vSwitch":{"e3d8639f-b7c6-4158-90e3-fd9848c9624f":{"next_cfg":30}}}
+OVSDB JSON 111 596460e207adf84d3be47d462f59ae758098879a
+{"_date":1759771090035,"Open_vSwitch":{"e3d8639f-b7c6-4158-90e3-fd9848c9624f":{"cur_cfg":30}},"_is_diff":true}
+OVSDB JSON 500 ed18d4a02c271a09e2aec942677cc84255ca2127
+{"Port":{"295a05f9-eeb0-4d14-ba29-32f112484b64":{"name":"eth1","interfaces":["uuid","447fd122-16a3-4471-b38b-6c6124ac7d0c"],"tag":10}},"Interface":{"447fd122-16a3-4471-b38b-6c6124ac7d0c":{"name":"eth1"}},"_date":1759771155330,"Bridge":{"b80139fe-ab20-4d0b-864d-b6ab1bd3b73b":{"ports":["uuid","295a05f9-eeb0-4d14-ba29-32f112484b64"]}},"_is_diff":true,"_comment":"ovs-vsctl (invoked by bash): ovs-vsctl add-port br0 eth1 tag=10","Open_vSwitch":{"e3d8639f-b7c6-4158-90e3-fd9848c9624f":{"next_cfg":31}}}
+OVSDB JSON 177 83ea3378c19743e2bce1f87b07064e3567d6ef0c
+{"Interface":{"447fd122-16a3-4471-b38b-6c6124ac7d0c":{"ofport":1}},"_date":1759771155334,"_is_diff":true,"Open_vSwitch":{"e3d8639f-b7c6-4158-90e3-fd9848c9624f":{"cur_cfg":31}}}
+OVSDB JSON 265 9d43bab8282fad15c57f1effee2994cb17c68377
+{"_date":1759771215970,"Bridge":{"b80139fe-ab20-4d0b-864d-b6ab1bd3b73b":{"stp_enable":true}},"_is_diff":true,"_comment":"ovs-vsctl (invoked by bash): ovs-vsctl set bridge br0 stp_enable=true","Open_vSwitch":{"e3d8639f-b7c6-4158-90e3-fd9848c9624f":{"next_cfg":32}}}
+OVSDB JSON 111 1e748dd83c211e804c8c533cbbeb824b54d5044c
+{"_date":1759771215972,"Open_vSwitch":{"e3d8639f-b7c6-4158-90e3-fd9848c9624f":{"cur_cfg":32}},"_is_diff":true}
+OVSDB JSON 409 f1945b42cf0c897ba34c4b72550909f8b7117902
+{"Controller":{"ca69b2bb-5c87-4bd7-8763-09963248e96d":{"target":"tcp:192.168.122.1:7777"}},"_date":1759774257607,"Bridge":{"b80139fe-ab20-4d0b-864d-b6ab1bd3b73b":{"controller":["uuid","ca69b2bb-5c87-4bd7-8763-09963248e96d"]}},"_is_diff":true,"_comment":"ovs-vsctl (invoked by bash): ovs-vsctl set-controller br0 tcp:192.168.122.1:7777","Open_vSwitch":{"e3d8639f-b7c6-4158-90e3-fd9848c9624f":{"next_cfg":33}}}
+OVSDB JSON 111 22cdeb82c07028640233106d46ffa6dfe0ef0369
+{"_date":1759774257612,"Open_vSwitch":{"e3d8639f-b7c6-4158-90e3-fd9848c9624f":{"cur_cfg":33}},"_is_diff":true}
+OVSDB JSON 169 3a35e200491e1ded120cbdc35d406277b37756e2
+{"Interface":{"447fd122-16a3-4471-b38b-6c6124ac7d0c":{"ofport":-1,"error":"could not open network device eth1 (No such device)"}},"_date":1759775450586,"_is_diff":true}
+OVSDB JSON 125 a53c39ae4e55a8096d93d6797a47826b6cec4e1a
+{"Interface":{"447fd122-16a3-4471-b38b-6c6124ac7d0c":{"ofport":1,"error":["set",[]]}},"_date":1759890450526,"_is_diff":true}
+OVSDB JSON 169 909b399229aa9839b3a84c0c77aead1b35be5ab7
+{"Interface":{"447fd122-16a3-4471-b38b-6c6124ac7d0c":{"ofport":-1,"error":"could not open network device eth1 (No such device)"}},"_date":1759899021044,"_is_diff":true}
+OVSDB JSON 125 cfacba6fa2ed74fca85198bf365812543e2b3614
+{"Interface":{"447fd122-16a3-4471-b38b-6c6124ac7d0c":{"ofport":1,"error":["set",[]]}},"_date":1760146131731,"_is_diff":true}
+OVSDB JSON 169 80fe6884c48156bb572a4deabfc6ea546cec1494
+{"Interface":{"447fd122-16a3-4471-b38b-6c6124ac7d0c":{"ofport":-1,"error":"could not open network device eth1 (No such device)"}},"_date":1760150139993,"_is_diff":true}
+OVSDB JSON 125 d427f74e9fd32b68c545f8ceec46b239ba941cc1
+{"Interface":{"447fd122-16a3-4471-b38b-6c6124ac7d0c":{"ofport":1,"error":["set",[]]}},"_date":1760150443259,"_is_diff":true}
+OVSDB JSON 600 f1d49851d779746f6f919903e8fde72abceacf69
+{"Interface":{"16e34847-c60f-4292-8ab9-61d609f76b19":{"name":"gre0","options":["map",[["remote_ip","10.1.1.1"]]],"type":"gre"}},"Port":{"4ff0ecec-fea7-409b-bae1-461dca6d80ea":{"name":"gre0","interfaces":["uuid","16e34847-c60f-4292-8ab9-61d609f76b19"]}},"_date":1760151384102,"Bridge":{"b80139fe-ab20-4d0b-864d-b6ab1bd3b73b":{"ports":["uuid","4ff0ecec-fea7-409b-bae1-461dca6d80ea"]}},"_is_diff":true,"_comment":"ovs-vsctl (invoked by bash): ovs-vsctl add-port br0 gre0 -- set interface gre0 type=gre options:remote_ip=10.1.1.1","Open_vSwitch":{"e3d8639f-b7c6-4158-90e3-fd9848c9624f":{"next_cfg":34}}}
+OVSDB JSON 177 74c474c5db49c3dbc4aaaa4af32a1b7c47cd3a55
+{"Interface":{"16e34847-c60f-4292-8ab9-61d609f76b19":{"ofport":2}},"_date":1760151384111,"_is_diff":true,"Open_vSwitch":{"e3d8639f-b7c6-4158-90e3-fd9848c9624f":{"cur_cfg":34}}}
+OVSDB JSON 169 4fccf9b58c09cf62f598624b9a5c15bba380e43e
+{"Interface":{"447fd122-16a3-4471-b38b-6c6124ac7d0c":{"ofport":-1,"error":"could not open network device eth1 (No such device)"}},"_date":1760151562315,"_is_diff":true}
+OVSDB JSON 125 a292a4143483e731e5542954be79d2bd11996776
+{"Interface":{"447fd122-16a3-4471-b38b-6c6124ac7d0c":{"ofport":1,"error":["set",[]]}},"_date":1760151570628,"_is_diff":true}
+OVSDB JSON 169 ba8079491398ebb61d0c2f7b3dc6656748f48b7c
+{"Interface":{"447fd122-16a3-4471-b38b-6c6124ac7d0c":{"ofport":-1,"error":"could not open network device eth1 (No such device)"}},"_date":1760151579252,"_is_diff":true}
+OVSDB JSON 125 9bb3dbe7558a2d9207690f0a36ad7004db392952
+{"Interface":{"447fd122-16a3-4471-b38b-6c6124ac7d0c":{"ofport":1,"error":["set",[]]}},"_date":1760156671922,"_is_diff":true}
+OVSDB JSON 500 d5c6dd4a6381c087ae658c18632ba7364b46ab95
+{"Port":{"d68ebaa8-d4a2-4588-aa9e-3278db26577d":{"name":"eth2","interfaces":["uuid","3248e056-29e9-4b28-9704-0420899cfbc0"],"tag":20}},"Interface":{"3248e056-29e9-4b28-9704-0420899cfbc0":{"name":"eth2"}},"_date":1760157951294,"Bridge":{"b80139fe-ab20-4d0b-864d-b6ab1bd3b73b":{"ports":["uuid","d68ebaa8-d4a2-4588-aa9e-3278db26577d"]}},"_is_diff":true,"_comment":"ovs-vsctl (invoked by bash): ovs-vsctl add-port br0 eth2 tag=20","Open_vSwitch":{"e3d8639f-b7c6-4158-90e3-fd9848c9624f":{"next_cfg":35}}}
+OVSDB JSON 177 387c6d3004ae5987c288a9798aece1b2f058653c
+{"Interface":{"3248e056-29e9-4b28-9704-0420899cfbc0":{"ofport":3}},"_date":1760157951298,"_is_diff":true,"Open_vSwitch":{"e3d8639f-b7c6-4158-90e3-fd9848c9624f":{"cur_cfg":35}}}
+OVSDB JSON 656 2ecb100a9bba65edc8cc6627fb58e29454d13ae1
+{"Interface":{"866191e3-f5a1-48a7-a444-476aa37efe06":{"name":"vxlan1","options":["map",[["key","20"],["remote_ip","10.2.2.1"]]],"type":"vxlan"}},"Port":{"f9978ed4-f29e-4c86-990a-587c85387057":{"name":"vxlan1","interfaces":["uuid","866191e3-f5a1-48a7-a444-476aa37efe06"],"tag":20}},"_date":1760158156159,"Bridge":{"b80139fe-ab20-4d0b-864d-b6ab1bd3b73b":{"ports":["uuid","f9978ed4-f29e-4c86-990a-587c85387057"]}},"_is_diff":true,"_comment":"ovs-vsctl (invoked by bash): ovs-vsctl add-port br0 vxlan1 tag=20 -- set interface vxlan1 type=vxlan options:key=20 options:remote_ip=10.2.2.1","Open_vSwitch":{"e3d8639f-b7c6-4158-90e3-fd9848c9624f":{"next_cfg":36}}}
+OVSDB JSON 177 4a6f5bd3ef71c4d01a9e4a39f9438ac8bc7fa91d
+{"Interface":{"866191e3-f5a1-48a7-a444-476aa37efe06":{"ofport":4}},"_date":1760158156163,"_is_diff":true,"Open_vSwitch":{"e3d8639f-b7c6-4158-90e3-fd9848c9624f":{"cur_cfg":36}}}
+OVSDB JSON 169 c0de90d6168b167c2a04fc0c80bd397629f24fe9
+{"Interface":{"3248e056-29e9-4b28-9704-0420899cfbc0":{"ofport":-1,"error":"could not open network device eth2 (No such device)"}},"_date":1760158388529,"_is_diff":true}
+OVSDB JSON 169 7f686a922f0ea2f6b0fbf9c33b6de7665a7be9a8
+{"Interface":{"447fd122-16a3-4471-b38b-6c6124ac7d0c":{"ofport":-1,"error":"could not open network device eth1 (No such device)"}},"_date":1760158388700,"_is_diff":true}
+OVSDB JSON 248 bc794b169088fdaba911ce5ef05e9cae5596c6c3
+{"Interface":{"447fd122-16a3-4471-b38b-6c6124ac7d0c":{"ofport":2,"error":["set",[]]},"3248e056-29e9-4b28-9704-0420899cfbc0":{"ofport":1,"error":["set",[]]},"16e34847-c60f-4292-8ab9-61d609f76b19":{"ofport":3}},"_date":1760385510212,"_is_diff":true}
+OVSDB JSON 169 c3df1856ab621134a82214e5cd086836648fe7c0
+{"Interface":{"3248e056-29e9-4b28-9704-0420899cfbc0":{"ofport":-1,"error":"could not open network device eth2 (No such device)"}},"_date":1760386078171,"_is_diff":true}
+OVSDB JSON 169 23037149a63b1e28ffd2a5d7fdf1ed1d8cb40936
+{"Interface":{"447fd122-16a3-4471-b38b-6c6124ac7d0c":{"ofport":-1,"error":"could not open network device eth1 (No such device)"}},"_date":1760386078215,"_is_diff":true}
+OVSDB JSON 196 7e9dcc301ae0eccb82b034219fff8e484b5e625b
+{"Interface":{"447fd122-16a3-4471-b38b-6c6124ac7d0c":{"ofport":2,"error":["set",[]]},"3248e056-29e9-4b28-9704-0420899cfbc0":{"ofport":1,"error":["set",[]]}},"_date":1760566025547,"_is_diff":true}
+OVSDB JSON 276 320a26296e26089109517b7dcdb418bf3b035887
+{"Interface":{"866191e3-f5a1-48a7-a444-476aa37efe06":{"mtu_request":1600}},"_date":1760567376527,"_is_diff":true,"_comment":"ovs-vsctl (invoked by bash): ovs-vsctl set Interface vxlan1 mtu_request=1600","Open_vSwitch":{"e3d8639f-b7c6-4158-90e3-fd9848c9624f":{"next_cfg":37}}}
+OVSDB JSON 111 0a5834f6ad253a1345c5f0aa60ecc081e9356ef5
+{"_date":1760567376529,"Open_vSwitch":{"e3d8639f-b7c6-4158-90e3-fd9848c9624f":{"cur_cfg":37}},"_is_diff":true}
+OVSDB JSON 274 07f7037b3ed45360ca78afcbd51568a7eb0597cb
+{"Interface":{"16e34847-c60f-4292-8ab9-61d609f76b19":{"mtu_request":1600}},"_date":1760567385935,"_is_diff":true,"_comment":"ovs-vsctl (invoked by bash): ovs-vsctl set Interface gre0 mtu_request=1600","Open_vSwitch":{"e3d8639f-b7c6-4158-90e3-fd9848c9624f":{"next_cfg":38}}}
+OVSDB JSON 111 8da910743bae8a81cc5981874ea55ec69cdb6796
+{"_date":1760567385936,"Open_vSwitch":{"e3d8639f-b7c6-4158-90e3-fd9848c9624f":{"cur_cfg":38}},"_is_diff":true}
+OVSDB JSON 169 17f9baa937c5632909f4b0ab67784804df9d09b8
+{"Interface":{"3248e056-29e9-4b28-9704-0420899cfbc0":{"ofport":-1,"error":"could not open network device eth2 (No such device)"}},"_date":1760567905515,"_is_diff":true}
+OVSDB JSON 169 ff331c2e6c74d350298055e101d1ea50f5cbb00d
+{"Interface":{"447fd122-16a3-4471-b38b-6c6124ac7d0c":{"ofport":-1,"error":"could not open network device eth1 (No such device)"}},"_date":1760567905566,"_is_diff":true}
+OVSDB JSON 196 82e661d8bff8d78e3202a3dddcfa06ebbdda49b7
+{"Interface":{"447fd122-16a3-4471-b38b-6c6124ac7d0c":{"ofport":2,"error":["set",[]]},"3248e056-29e9-4b28-9704-0420899cfbc0":{"ofport":1,"error":["set",[]]}},"_date":1760567964542,"_is_diff":true}
+OVSDB JSON 169 0457196e4b498170f6073c58b429d79d16fc74f1
+{"Interface":{"3248e056-29e9-4b28-9704-0420899cfbc0":{"ofport":-1,"error":"could not open network device eth2 (No such device)"}},"_date":1760568074333,"_is_diff":true}
+OVSDB JSON 169 536d110e2da7bb42d5ada8d2050a86dbe19a0973
+{"Interface":{"447fd122-16a3-4471-b38b-6c6124ac7d0c":{"ofport":-1,"error":"could not open network device eth1 (No such device)"}},"_date":1760568074408,"_is_diff":true}
+OVSDB JSON 196 b794069b66ab6449355ed8d2b83e2709d05bce38
+{"Interface":{"447fd122-16a3-4471-b38b-6c6124ac7d0c":{"ofport":2,"error":["set",[]]},"3248e056-29e9-4b28-9704-0420899cfbc0":{"ofport":1,"error":["set",[]]}},"_date":1760569633061,"_is_diff":true}
+OVSDB JSON 169 34b45d459b3bac12251a21b88489999d529a14cb
+{"Interface":{"3248e056-29e9-4b28-9704-0420899cfbc0":{"ofport":-1,"error":"could not open network device eth2 (No such device)"}},"_date":1760579329047,"_is_diff":true}
+OVSDB JSON 169 4da4219325337eb55cf22aa66a9a78ecb777eba5
+{"Interface":{"447fd122-16a3-4471-b38b-6c6124ac7d0c":{"ofport":-1,"error":"could not open network device eth1 (No such device)"}},"_date":1760579329142,"_is_diff":true}
+OVSDB JSON 196 719727069a17f0a335a11f353368e2de74b92f11
+{"Interface":{"447fd122-16a3-4471-b38b-6c6124ac7d0c":{"ofport":2,"error":["set",[]]},"3248e056-29e9-4b28-9704-0420899cfbc0":{"ofport":1,"error":["set",[]]}},"_date":1760616037217,"_is_diff":true}
+OVSDB JSON 169 a4fb1e3d2b4bf50dd087ec2d486c0360a0c2c1f9
+{"Interface":{"3248e056-29e9-4b28-9704-0420899cfbc0":{"ofport":-1,"error":"could not open network device eth2 (No such device)"}},"_date":1760617814131,"_is_diff":true}
+OVSDB JSON 169 cbeb9b7f981ab05c1cafdb5871a4e7e5fb5bfb13
+{"Interface":{"447fd122-16a3-4471-b38b-6c6124ac7d0c":{"ofport":-1,"error":"could not open network device eth1 (No such device)"}},"_date":1760617814180,"_is_diff":true}
+OVSDB JSON 196 4b49cefd4e17e3e200d8b4aff1df04ebac2e8cea
+{"Interface":{"447fd122-16a3-4471-b38b-6c6124ac7d0c":{"ofport":2,"error":["set",[]]},"3248e056-29e9-4b28-9704-0420899cfbc0":{"ofport":1,"error":["set",[]]}},"_date":1760617835430,"_is_diff":true}
+OVSDB JSON 169 5d3cffde2bbecba9f6bd55acc893b39df20efc44
+{"Interface":{"3248e056-29e9-4b28-9704-0420899cfbc0":{"ofport":-1,"error":"could not open network device eth2 (No such device)"}},"_date":1760619063863,"_is_diff":true}
+OVSDB JSON 169 13f36e56693f1b02aaee799292e11a56d34fcb7f
+{"Interface":{"447fd122-16a3-4471-b38b-6c6124ac7d0c":{"ofport":-1,"error":"could not open network device eth1 (No such device)"}},"_date":1760619063934,"_is_diff":true}
+OVSDB JSON 196 7d4ed711c96020b1a679e90949a29e7422c0c266
+{"Interface":{"447fd122-16a3-4471-b38b-6c6124ac7d0c":{"ofport":2,"error":["set",[]]},"3248e056-29e9-4b28-9704-0420899cfbc0":{"ofport":1,"error":["set",[]]}},"_date":1760619101272,"_is_diff":true}
+OVSDB JSON 169 2e889a2b459d5b4bdde7e5ba0f0bafe826d716c1
+{"Interface":{"3248e056-29e9-4b28-9704-0420899cfbc0":{"ofport":-1,"error":"could not open network device eth2 (No such device)"}},"_date":1760628671383,"_is_diff":true}
+OVSDB JSON 169 00aa3308be9ceba44c6331a32d5fac4f551c4fd2
+{"Interface":{"447fd122-16a3-4471-b38b-6c6124ac7d0c":{"ofport":-1,"error":"could not open network device eth1 (No such device)"}},"_date":1760628671560,"_is_diff":true}
+OVSDB JSON 196 33f5c5180f5736bafd512518cab158968de99ff5
+{"Interface":{"447fd122-16a3-4471-b38b-6c6124ac7d0c":{"ofport":2,"error":["set",[]]},"3248e056-29e9-4b28-9704-0420899cfbc0":{"ofport":1,"error":["set",[]]}},"_date":1760718030239,"_is_diff":true}
+OVSDB JSON 169 5ef2af590670b2cb017d30be298540535713773d
+{"Interface":{"3248e056-29e9-4b28-9704-0420899cfbc0":{"ofport":-1,"error":"could not open network device eth2 (No such device)"}},"_date":1760729707319,"_is_diff":true}
+OVSDB JSON 169 6c22c3e9566b4ee50e4d437a64adfc67addfad0b
+{"Interface":{"447fd122-16a3-4471-b38b-6c6124ac7d0c":{"ofport":-1,"error":"could not open network device eth1 (No such device)"}},"_date":1760729707412,"_is_diff":true}
+OVSDB JSON 196 8e4f1e517118b3626b65ca8d061fc983826f85e1
+{"Interface":{"447fd122-16a3-4471-b38b-6c6124ac7d0c":{"ofport":2,"error":["set",[]]},"3248e056-29e9-4b28-9704-0420899cfbc0":{"ofport":1,"error":["set",[]]}},"_date":1760995995470,"_is_diff":true}
+OVSDB JSON 169 c5ff450725867c339eb6eb23f284b906a72a0eb6
+{"Interface":{"3248e056-29e9-4b28-9704-0420899cfbc0":{"ofport":-1,"error":"could not open network device eth2 (No such device)"}},"_date":1761016410396,"_is_diff":true}
+OVSDB JSON 169 715db7771bb248cb67d5a4bcdfcda810f0b641ee
+{"Interface":{"447fd122-16a3-4471-b38b-6c6124ac7d0c":{"ofport":-1,"error":"could not open network device eth1 (No such device)"}},"_date":1761016410505,"_is_diff":true}
+OVSDB JSON 196 42e5920c5e9b045d624012159fead317018ad89a
+{"Interface":{"447fd122-16a3-4471-b38b-6c6124ac7d0c":{"ofport":2,"error":["set",[]]},"3248e056-29e9-4b28-9704-0420899cfbc0":{"ofport":1,"error":["set",[]]}},"_date":1761050185002,"_is_diff":true}
+OVSDB JSON 169 2bb5bc19d5b0556b985460a1e8a4eb0a10df66d2
+{"Interface":{"3248e056-29e9-4b28-9704-0420899cfbc0":{"ofport":-1,"error":"could not open network device eth2 (No such device)"}},"_date":1761060655982,"_is_diff":true}
+OVSDB JSON 169 6cd6300c97a01a2342ebc4eb90b4841fd689737b
+{"Interface":{"447fd122-16a3-4471-b38b-6c6124ac7d0c":{"ofport":-1,"error":"could not open network device eth1 (No such device)"}},"_date":1761060656283,"_is_diff":true}
+OVSDB JSON 196 d97c906e85c0f1af6018f6cffa938a3611a3863c
+{"Interface":{"447fd122-16a3-4471-b38b-6c6124ac7d0c":{"ofport":2,"error":["set",[]]},"3248e056-29e9-4b28-9704-0420899cfbc0":{"ofport":1,"error":["set",[]]}},"_date":1761093489670,"_is_diff":true}
+OVSDB JSON 169 52ffd3d0f0eb296cd61d591d8f5cdca37537122a
+{"Interface":{"3248e056-29e9-4b28-9704-0420899cfbc0":{"ofport":-1,"error":"could not open network device eth2 (No such device)"}},"_date":1761094046723,"_is_diff":true}
+OVSDB JSON 169 5c9be078481e5ee9876573d9c9cd499e7e3a7d46
+{"Interface":{"447fd122-16a3-4471-b38b-6c6124ac7d0c":{"ofport":-1,"error":"could not open network device eth1 (No such device)"}},"_date":1761094046805,"_is_diff":true}
+OVSDB JSON 196 b604a0599fd8ba18c489762635de497b525c0ae3
+{"Interface":{"447fd122-16a3-4471-b38b-6c6124ac7d0c":{"ofport":2,"error":["set",[]]},"3248e056-29e9-4b28-9704-0420899cfbc0":{"ofport":1,"error":["set",[]]}},"_date":1761095210020,"_is_diff":true}
+OVSDB JSON 169 693744b49828b8e646540875b1dd8fd43b9a98d1
+{"Interface":{"3248e056-29e9-4b28-9704-0420899cfbc0":{"ofport":-1,"error":"could not open network device eth2 (No such device)"}},"_date":1761110043977,"_is_diff":true}
+OVSDB JSON 169 3dd7001db1a7b43de9449f728855739c984f16cd
+{"Interface":{"447fd122-16a3-4471-b38b-6c6124ac7d0c":{"ofport":-1,"error":"could not open network device eth1 (No such device)"}},"_date":1761110044034,"_is_diff":true}
+OVSDB JSON 196 c42d7101774ca913a72de9e5bea0222dc0cd72e9
+{"Interface":{"447fd122-16a3-4471-b38b-6c6124ac7d0c":{"ofport":2,"error":["set",[]]},"3248e056-29e9-4b28-9704-0420899cfbc0":{"ofport":1,"error":["set",[]]}},"_date":1761147828638,"_is_diff":true}
+OVSDB JSON 487 61c72572b9fcf9c51d6f4358b5c243dcfed06035
+{"Port":{"5bcdf602-cc4e-49b9-bf8f-c2a5eccf7b11":{"name":"eth10","interfaces":["uuid","e1cdbd21-8ff0-4e1d-8d1d-bbebc6dfccd7"]}},"Interface":{"e1cdbd21-8ff0-4e1d-8d1d-bbebc6dfccd7":{"name":"eth10"}},"_date":1761148934504,"Bridge":{"b80139fe-ab20-4d0b-864d-b6ab1bd3b73b":{"ports":["uuid","5bcdf602-cc4e-49b9-bf8f-c2a5eccf7b11"]}},"_is_diff":true,"_comment":"ovs-vsctl (invoked by bash): ovs-vsctl add-port br0 eth10","Open_vSwitch":{"e3d8639f-b7c6-4158-90e3-fd9848c9624f":{"next_cfg":39}}}
+OVSDB JSON 177 7d2ba516beba228748474f4b409e5c8b6680dd2f
+{"Interface":{"e1cdbd21-8ff0-4e1d-8d1d-bbebc6dfccd7":{"ofport":5}},"_date":1761148934508,"_is_diff":true,"Open_vSwitch":{"e3d8639f-b7c6-4158-90e3-fd9848c9624f":{"cur_cfg":39}}}
+OVSDB JSON 567 49fbf5e7c7c0534361c72135e0765e059f7b58a0
+{"_date":1761149145312,"Bridge":{"b80139fe-ab20-4d0b-864d-b6ab1bd3b73b":{"mirrors":["uuid","38359421-5c4c-48ae-947e-2d6999452d89"]}},"Mirror":{"38359421-5c4c-48ae-947e-2d6999452d89":{"select_all":true,"name":"NTOPNG-mirror","output_port":["uuid","5bcdf602-cc4e-49b9-bf8f-c2a5eccf7b11"]}},"_is_diff":true,"_comment":"ovs-vsctl (invoked by bash): ovs-vsctl -- set bridge br0 mirrors=@m -- --id=@eth10 get port eth10 -- --id=@m create mirror name=NTOPNG-mirror select-all=true output-port=@eth10","Open_vSwitch":{"e3d8639f-b7c6-4158-90e3-fd9848c9624f":{"next_cfg":40}}}
+OVSDB JSON 111 15fe359bd2e377784782457213a3cb76cd47e3b5
+{"_date":1761149145314,"Open_vSwitch":{"e3d8639f-b7c6-4158-90e3-fd9848c9624f":{"cur_cfg":40}},"_is_diff":true}
+OVSDB JSON 170 f1e0e7a67c2a1111c50ecf73fd4a403ea1c456c6
+{"Interface":{"e1cdbd21-8ff0-4e1d-8d1d-bbebc6dfccd7":{"ofport":-1,"error":"could not open network device eth10 (No such device)"}},"_date":1761150485829,"_is_diff":true}
+OVSDB JSON 169 7169bffbddecdb56eb8ebb8c9969b1a2c6f00bb6
+{"Interface":{"3248e056-29e9-4b28-9704-0420899cfbc0":{"ofport":-1,"error":"could not open network device eth2 (No such device)"}},"_date":1761150486077,"_is_diff":true}
+OVSDB JSON 169 4803ecf39c7787d82c2b951cd50635c2ec8e6d60
+{"Interface":{"447fd122-16a3-4471-b38b-6c6124ac7d0c":{"ofport":-1,"error":"could not open network device eth1 (No such device)"}},"_date":1761150486110,"_is_diff":true}
+OVSDB JSON 319 5aff26e58ce4c26363d3357a8f6154d543b6df02
+{"Interface":{"447fd122-16a3-4471-b38b-6c6124ac7d0c":{"ofport":3,"error":["set",[]]},"e1cdbd21-8ff0-4e1d-8d1d-bbebc6dfccd7":{"ofport":2,"error":["set",[]]},"3248e056-29e9-4b28-9704-0420899cfbc0":{"ofport":1,"error":["set",[]]},"16e34847-c60f-4292-8ab9-61d609f76b19":{"ofport":5}},"_date":1761150494137,"_is_diff":true}
+OVSDB JSON 170 321069f7cab4d4ed517ee0f43e498827a4e72258
+{"Interface":{"e1cdbd21-8ff0-4e1d-8d1d-bbebc6dfccd7":{"ofport":-1,"error":"could not open network device eth10 (No such device)"}},"_date":1761150509816,"_is_diff":true}
+OVSDB JSON 169 5f8b1f10bea6e9836bedc19800bb4cbbb1eae243
+{"Interface":{"3248e056-29e9-4b28-9704-0420899cfbc0":{"ofport":-1,"error":"could not open network device eth2 (No such device)"}},"_date":1761150510430,"_is_diff":true}
+OVSDB JSON 169 10fafb0acc76794fc092d0dcea8bf6430004900e
+{"Interface":{"447fd122-16a3-4471-b38b-6c6124ac7d0c":{"ofport":-1,"error":"could not open network device eth1 (No such device)"}},"_date":1761150510488,"_is_diff":true}
+OVSDB JSON 267 e3b577657f88f6c0f9940467522468956aa92b31
+{"Interface":{"447fd122-16a3-4471-b38b-6c6124ac7d0c":{"ofport":3,"error":["set",[]]},"e1cdbd21-8ff0-4e1d-8d1d-bbebc6dfccd7":{"ofport":2,"error":["set",[]]},"3248e056-29e9-4b28-9704-0420899cfbc0":{"ofport":1,"error":["set",[]]}},"_date":1761151963976,"_is_diff":true}
+OVSDB JSON 170 feec779911308b5caefbcbee6e174d9c4a155964
+{"Interface":{"e1cdbd21-8ff0-4e1d-8d1d-bbebc6dfccd7":{"ofport":-1,"error":"could not open network device eth10 (No such device)"}},"_date":1761153459455,"_is_diff":true}
+OVSDB JSON 169 06e857b49ec8219c635e6d620231a4d20dd64207
+{"Interface":{"3248e056-29e9-4b28-9704-0420899cfbc0":{"ofport":-1,"error":"could not open network device eth2 (No such device)"}},"_date":1761153459915,"_is_diff":true}
+OVSDB JSON 169 4b910e67a0ddec29ec41212ccbf97a74ef37a035
+{"Interface":{"447fd122-16a3-4471-b38b-6c6124ac7d0c":{"ofport":-1,"error":"could not open network device eth1 (No such device)"}},"_date":1761153460002,"_is_diff":true}
+OVSDB JSON 267 c0615e20cc6830b4b77c0d4505104f0b3e6cccc9
+{"Interface":{"447fd122-16a3-4471-b38b-6c6124ac7d0c":{"ofport":3,"error":["set",[]]},"e1cdbd21-8ff0-4e1d-8d1d-bbebc6dfccd7":{"ofport":2,"error":["set",[]]},"3248e056-29e9-4b28-9704-0420899cfbc0":{"ofport":1,"error":["set",[]]}},"_date":1761153665840,"_is_diff":true}
+OVSDB JSON 170 b7ee15182171473b9997c20dc9c8e4d90f8beb7f
+{"Interface":{"e1cdbd21-8ff0-4e1d-8d1d-bbebc6dfccd7":{"ofport":-1,"error":"could not open network device eth10 (No such device)"}},"_date":1761303348002,"_is_diff":true}
+OVSDB JSON 169 5e27ad610447a05cc91e5d30279f736816991ede
+{"Interface":{"3248e056-29e9-4b28-9704-0420899cfbc0":{"ofport":-1,"error":"could not open network device eth2 (No such device)"}},"_date":1761303348370,"_is_diff":true}
+OVSDB JSON 169 1b57aed256b8951bd0ce79c530501f172fc9df91
+{"Interface":{"447fd122-16a3-4471-b38b-6c6124ac7d0c":{"ofport":-1,"error":"could not open network device eth1 (No such device)"}},"_date":1761303348429,"_is_diff":true}
+OVSDB JSON 267 21da182864e97c45ab0e63cc1722ad05dddd3f83
+{"Interface":{"447fd122-16a3-4471-b38b-6c6124ac7d0c":{"ofport":3,"error":["set",[]]},"e1cdbd21-8ff0-4e1d-8d1d-bbebc6dfccd7":{"ofport":2,"error":["set",[]]},"3248e056-29e9-4b28-9704-0420899cfbc0":{"ofport":1,"error":["set",[]]}},"_date":1761303900932,"_is_diff":true}
+OVSDB JSON 170 f8a15e567f3f906b47def91b7e3d8047845aae80
+{"Interface":{"e1cdbd21-8ff0-4e1d-8d1d-bbebc6dfccd7":{"ofport":-1,"error":"could not open network device eth10 (No such device)"}},"_date":1761305506402,"_is_diff":true}
+OVSDB JSON 169 da7b36bfc4aeb9a9d47098b9d1ac8ea1f9f8e89f
+{"Interface":{"3248e056-29e9-4b28-9704-0420899cfbc0":{"ofport":-1,"error":"could not open network device eth2 (No such device)"}},"_date":1761305506879,"_is_diff":true}
+OVSDB JSON 169 5c526f1c18c198a4b37213bbad0b3c921b1e9068
+{"Interface":{"447fd122-16a3-4471-b38b-6c6124ac7d0c":{"ofport":-1,"error":"could not open network device eth1 (No such device)"}},"_date":1761305506935,"_is_diff":true}
+OVSDB JSON 267 cae1dd09d39b688995b0cd5cfd340a57a8e491ff
+{"Interface":{"447fd122-16a3-4471-b38b-6c6124ac7d0c":{"ofport":3,"error":["set",[]]},"e1cdbd21-8ff0-4e1d-8d1d-bbebc6dfccd7":{"ofport":2,"error":["set",[]]},"3248e056-29e9-4b28-9704-0420899cfbc0":{"ofport":1,"error":["set",[]]}},"_date":1761306680599,"_is_diff":true}
+OVSDB JSON 170 93249243f17931802c0a0c0ddcd067f38f3b3c7d
+{"Interface":{"e1cdbd21-8ff0-4e1d-8d1d-bbebc6dfccd7":{"ofport":-1,"error":"could not open network device eth10 (No such device)"}},"_date":1761307581530,"_is_diff":true}
+OVSDB JSON 169 cbc8716d61019fa057b4288e92b6778cd5fef8aa
+{"Interface":{"3248e056-29e9-4b28-9704-0420899cfbc0":{"ofport":-1,"error":"could not open network device eth2 (No such device)"}},"_date":1761307581823,"_is_diff":true}
+OVSDB JSON 169 3cc70d66e2fdd0185b2679803233ad81d3834044
+{"Interface":{"447fd122-16a3-4471-b38b-6c6124ac7d0c":{"ofport":-1,"error":"could not open network device eth1 (No such device)"}},"_date":1761307581883,"_is_diff":true}
+OVSDB JSON 267 21c4b4a48206ddec4472daa59939b9de35dc19af
+{"Interface":{"447fd122-16a3-4471-b38b-6c6124ac7d0c":{"ofport":3,"error":["set",[]]},"e1cdbd21-8ff0-4e1d-8d1d-bbebc6dfccd7":{"ofport":2,"error":["set",[]]},"3248e056-29e9-4b28-9704-0420899cfbc0":{"ofport":1,"error":["set",[]]}},"_date":1761307589946,"_is_diff":true}
+OVSDB JSON 170 fc32eadc073716cc89283af538fed7dcb3076966
+{"Interface":{"e1cdbd21-8ff0-4e1d-8d1d-bbebc6dfccd7":{"ofport":-1,"error":"could not open network device eth10 (No such device)"}},"_date":1761307607645,"_is_diff":true}
+OVSDB JSON 169 6b08c7515c00fbb08d55f706fe9b7152d4ab7b12
+{"Interface":{"3248e056-29e9-4b28-9704-0420899cfbc0":{"ofport":-1,"error":"could not open network device eth2 (No such device)"}},"_date":1761307608058,"_is_diff":true}
+OVSDB JSON 169 8a0360e60fa69aa2138a01a5c462a442db295fff
+{"Interface":{"447fd122-16a3-4471-b38b-6c6124ac7d0c":{"ofport":-1,"error":"could not open network device eth1 (No such device)"}},"_date":1761307608155,"_is_diff":true}
+OVSDB JSON 267 fe06f58784333b3a9e2a3ec7b6201622423a4fe2
+{"Interface":{"447fd122-16a3-4471-b38b-6c6124ac7d0c":{"ofport":3,"error":["set",[]]},"e1cdbd21-8ff0-4e1d-8d1d-bbebc6dfccd7":{"ofport":2,"error":["set",[]]},"3248e056-29e9-4b28-9704-0420899cfbc0":{"ofport":1,"error":["set",[]]}},"_date":1761307948976,"_is_diff":true}
+OVSDB JSON 170 f6f99691d71509227128244ea361eb4e42c2b86d
+{"Interface":{"e1cdbd21-8ff0-4e1d-8d1d-bbebc6dfccd7":{"ofport":-1,"error":"could not open network device eth10 (No such device)"}},"_date":1761353478077,"_is_diff":true}
+OVSDB JSON 169 47c008289edec2610eeca21bb7cc6dc64b6b0880
+{"Interface":{"3248e056-29e9-4b28-9704-0420899cfbc0":{"ofport":-1,"error":"could not open network device eth2 (No such device)"}},"_date":1761353478630,"_is_diff":true}
+OVSDB JSON 169 7b26648cfbd3ae4e0ecbae1bc7b3c4db6453b91a
+{"Interface":{"447fd122-16a3-4471-b38b-6c6124ac7d0c":{"ofport":-1,"error":"could not open network device eth1 (No such device)"}},"_date":1761353478697,"_is_diff":true}
+OVSDB JSON 267 06a1f0abf572a1c68afbc1ad6591de63c39edebb
+{"Interface":{"447fd122-16a3-4471-b38b-6c6124ac7d0c":{"ofport":3,"error":["set",[]]},"e1cdbd21-8ff0-4e1d-8d1d-bbebc6dfccd7":{"ofport":2,"error":["set",[]]},"3248e056-29e9-4b28-9704-0420899cfbc0":{"ofport":1,"error":["set",[]]}},"_date":1761409605494,"_is_diff":true}
+OVSDB JSON 170 88598a7ccea779e17e3f94d8d0277c9d74e7df60
+{"Interface":{"e1cdbd21-8ff0-4e1d-8d1d-bbebc6dfccd7":{"ofport":-1,"error":"could not open network device eth10 (No such device)"}},"_date":1761413101187,"_is_diff":true}
+OVSDB JSON 169 be2adf22b081ff8f36b31c5495a6f51e0ee60741
+{"Interface":{"3248e056-29e9-4b28-9704-0420899cfbc0":{"ofport":-1,"error":"could not open network device eth2 (No such device)"}},"_date":1761413101776,"_is_diff":true}
+OVSDB JSON 169 8e984cf008585f7e40e15ff4b8383588b47c2aaf
+{"Interface":{"447fd122-16a3-4471-b38b-6c6124ac7d0c":{"ofport":-1,"error":"could not open network device eth1 (No such device)"}},"_date":1761413101836,"_is_diff":true}
+OVSDB JSON 267 9c85f9eb59a1304882aab85fb4cf6c99824e2102
+{"Interface":{"447fd122-16a3-4471-b38b-6c6124ac7d0c":{"ofport":3,"error":["set",[]]},"e1cdbd21-8ff0-4e1d-8d1d-bbebc6dfccd7":{"ofport":2,"error":["set",[]]},"3248e056-29e9-4b28-9704-0420899cfbc0":{"ofport":1,"error":["set",[]]}},"_date":1761415027679,"_is_diff":true}
+OVSDB JSON 170 c000e39a81e70c5e716ca6f2e16da9522cace5f4
+{"Interface":{"e1cdbd21-8ff0-4e1d-8d1d-bbebc6dfccd7":{"ofport":-1,"error":"could not open network device eth10 (No such device)"}},"_date":1761415200701,"_is_diff":true}
+OVSDB JSON 169 73cf2c4478620a1afee375079e80a2d59da6cc7c
+{"Interface":{"3248e056-29e9-4b28-9704-0420899cfbc0":{"ofport":-1,"error":"could not open network device eth2 (No such device)"}},"_date":1761415201350,"_is_diff":true}
+OVSDB JSON 169 5b3f758e7167e04d8273b0a85eb85603263fbd24
+{"Interface":{"447fd122-16a3-4471-b38b-6c6124ac7d0c":{"ofport":-1,"error":"could not open network device eth1 (No such device)"}},"_date":1761415201456,"_is_diff":true}
+OVSDB JSON 267 8d5ab16dbe345d3ce8a4d990ce7a9a348bb3935e
+{"Interface":{"447fd122-16a3-4471-b38b-6c6124ac7d0c":{"ofport":3,"error":["set",[]]},"e1cdbd21-8ff0-4e1d-8d1d-bbebc6dfccd7":{"ofport":2,"error":["set",[]]},"3248e056-29e9-4b28-9704-0420899cfbc0":{"ofport":1,"error":["set",[]]}},"_date":1761654734009,"_is_diff":true}
+OVSDB JSON 170 543a3538fb9fd73d7b327fea276a5c9ad06bbb25
+{"Interface":{"e1cdbd21-8ff0-4e1d-8d1d-bbebc6dfccd7":{"ofport":-1,"error":"could not open network device eth10 (No such device)"}},"_date":1761666426575,"_is_diff":true}
+OVSDB JSON 169 c41b33d3f4848557ed23943f7c9355784fca71cf
+{"Interface":{"3248e056-29e9-4b28-9704-0420899cfbc0":{"ofport":-1,"error":"could not open network device eth2 (No such device)"}},"_date":1761666427099,"_is_diff":true}
+OVSDB JSON 169 20a6a4b0a74eed6b8559a698f04027bf16bef5ed
+{"Interface":{"447fd122-16a3-4471-b38b-6c6124ac7d0c":{"ofport":-1,"error":"could not open network device eth1 (No such device)"}},"_date":1761666427152,"_is_diff":true}
+OVSDB JSON 267 337e3474872dc037fbd253f84fde005624638444
+{"Interface":{"447fd122-16a3-4471-b38b-6c6124ac7d0c":{"ofport":3,"error":["set",[]]},"e1cdbd21-8ff0-4e1d-8d1d-bbebc6dfccd7":{"ofport":2,"error":["set",[]]},"3248e056-29e9-4b28-9704-0420899cfbc0":{"ofport":1,"error":["set",[]]}},"_date":1761745790961,"_is_diff":true}
+OVSDB JSON 170 1591c431e50e7ccdc6ed5f13d8afe0ae56976fef
+{"Interface":{"e1cdbd21-8ff0-4e1d-8d1d-bbebc6dfccd7":{"ofport":-1,"error":"could not open network device eth10 (No such device)"}},"_date":1761751229706,"_is_diff":true}
+OVSDB JSON 169 2c2a80f3f25d91ffd1a3170121daf9c6358ae8ba
+{"Interface":{"3248e056-29e9-4b28-9704-0420899cfbc0":{"ofport":-1,"error":"could not open network device eth2 (No such device)"}},"_date":1761751230289,"_is_diff":true}
+OVSDB JSON 169 b8698f5e35950d8b8de159da75cc2d3be6ec2bb2
+{"Interface":{"447fd122-16a3-4471-b38b-6c6124ac7d0c":{"ofport":-1,"error":"could not open network device eth1 (No such device)"}},"_date":1761751230408,"_is_diff":true}
